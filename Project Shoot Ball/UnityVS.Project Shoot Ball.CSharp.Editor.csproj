@@ -110,6 +110,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\PolyNav2D\Scripts\Editor\PolyNav2DInspector.cs" />
     <Compile Include="Assets\Tile Editor\Scripts\Editor\TileMapInspector.cs" />
     <Compile Include="Assets\Tile Editor\Scripts\Editor\TileMapWizard.cs" />
     <Compile Include="Assets\Tile Editor\Scripts\Editor\TileSetNameWizard.cs" />
