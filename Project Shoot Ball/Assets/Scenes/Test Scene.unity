@@ -4383,6 +4383,7 @@ GameObject:
   - 114: {fileID: 398398766}
   - 114: {fileID: 398398765}
   - 58: {fileID: 398398764}
+  - 50: {fileID: 398398769}
   m_Layer: 0
   m_Name: spaceship 9
   m_TagString: Untagged
@@ -4477,6 +4478,21 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
+--- !u!50 &398398769
+Rigidbody2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 398398763}
+  m_Mass: 1
+  m_LinearDrag: .400000006
+  m_AngularDrag: .0500000007
+  m_GravityScale: 0
+  m_FixedAngle: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
 --- !u!1 &400669195
 GameObject:
   m_ObjectHideFlags: 0
@@ -4651,6 +4667,7 @@ GameObject:
   - 114: {fileID: 405579534}
   - 114: {fileID: 405579533}
   - 58: {fileID: 405579537}
+  - 50: {fileID: 405579538}
   m_Layer: 0
   m_Name: spaceship
   m_TagString: Untagged
@@ -4745,6 +4762,21 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: .230000004
+--- !u!50 &405579538
+Rigidbody2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 405579532}
+  m_Mass: 1
+  m_LinearDrag: .400000006
+  m_AngularDrag: .0500000007
+  m_GravityScale: 0
+  m_FixedAngle: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
 --- !u!1 &419309485
 GameObject:
   m_ObjectHideFlags: 0
@@ -5335,6 +5367,7 @@ GameObject:
   - 114: {fileID: 468055864}
   - 114: {fileID: 468055863}
   - 58: {fileID: 468055862}
+  - 50: {fileID: 468055867}
   m_Layer: 0
   m_Name: spaceship 5
   m_TagString: Untagged
@@ -5429,6 +5462,21 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 4
+--- !u!50 &468055867
+Rigidbody2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 468055861}
+  m_Mass: 1
+  m_LinearDrag: .400000006
+  m_AngularDrag: .0500000007
+  m_GravityScale: 0
+  m_FixedAngle: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
 --- !u!1 &469921897
 GameObject:
   m_ObjectHideFlags: 0
@@ -14990,6 +15038,7 @@ GameObject:
   - 114: {fileID: 1346659185}
   - 114: {fileID: 1346659184}
   - 58: {fileID: 1346659183}
+  - 50: {fileID: 1346659188}
   m_Layer: 0
   m_Name: spaceship 6
   m_TagString: Untagged
@@ -15084,6 +15133,21 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 3
+--- !u!50 &1346659188
+Rigidbody2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1346659182}
+  m_Mass: 1
+  m_LinearDrag: .400000006
+  m_AngularDrag: .0500000007
+  m_GravityScale: 0
+  m_FixedAngle: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
 --- !u!1 &1351518182
 GameObject:
   m_ObjectHideFlags: 0
@@ -16145,6 +16209,48 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300556, guid: 8cb5a665754e67c40ada08ca5594cf88, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!1001 &1472966483
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 474516, guid: 103f740d47344c84fbc38c50791a941c, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 8.18000031
+      objectReference: {fileID: 0}
+    - target: {fileID: 474516, guid: 103f740d47344c84fbc38c50791a941c, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 10.2799997
+      objectReference: {fileID: 0}
+    - target: {fileID: 474516, guid: 103f740d47344c84fbc38c50791a941c, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 474516, guid: 103f740d47344c84fbc38c50791a941c, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 474516, guid: 103f740d47344c84fbc38c50791a941c, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 474516, guid: 103f740d47344c84fbc38c50791a941c, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 474516, guid: 103f740d47344c84fbc38c50791a941c, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 474516, guid: 103f740d47344c84fbc38c50791a941c, type: 2}
+      propertyPath: m_RootOrder
+      value: 13
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 103f740d47344c84fbc38c50791a941c, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &1478763321
 GameObject:
   m_ObjectHideFlags: 0
@@ -16492,6 +16598,7 @@ GameObject:
   - 114: {fileID: 1515034051}
   - 114: {fileID: 1515034050}
   - 58: {fileID: 1515034049}
+  - 50: {fileID: 1515034054}
   m_Layer: 0
   m_Name: spaceship 7
   m_TagString: Untagged
@@ -16586,6 +16693,21 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 2
+--- !u!50 &1515034054
+Rigidbody2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1515034048}
+  m_Mass: 1
+  m_LinearDrag: .400000006
+  m_AngularDrag: .0500000007
+  m_GravityScale: 0
+  m_FixedAngle: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
 --- !u!1 &1521673682
 GameObject:
   m_ObjectHideFlags: 0
@@ -17069,6 +17191,111 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300556, guid: 8cb5a665754e67c40ada08ca5594cf88, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!1 &1547229463
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1547229469}
+  - 33: {fileID: 1547229468}
+  - 23: {fileID: 1547229467}
+  - 58: {fileID: 1547229466}
+  - 50: {fileID: 1547229465}
+  - 114: {fileID: 1547229464}
+  m_Layer: 0
+  m_Name: Sphere
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1547229464
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1547229463}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f6fe79fb5e2a2d48921aa8179cb5f24, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fuseTime: 0
+  blastRadius: 0
+  blastTime: 0
+--- !u!50 &1547229465
+Rigidbody2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1547229463}
+  m_Mass: 1
+  m_LinearDrag: .100000001
+  m_AngularDrag: .0500000007
+  m_GravityScale: 0
+  m_FixedAngle: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+--- !u!58 &1547229466
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1547229463}
+  m_Enabled: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: .5
+--- !u!23 &1547229467
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1547229463}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_Materials:
+  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 1
+  m_ReflectionProbeUsage: 1
+  m_ProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 1
+  m_ImportantGI: 0
+  m_AutoUVMaxDistance: .5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+--- !u!33 &1547229468
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1547229463}
+  m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &1547229469
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1547229463}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 10.2600002, y: 6.71999979, z: 0}
+  m_LocalScale: {x: .400000006, y: .400000006, z: .400000006}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 14
 --- !u!1 &1550588547
 GameObject:
   m_ObjectHideFlags: 0
@@ -18921,6 +19148,7 @@ GameObject:
   - 114: {fileID: 1758050359}
   - 114: {fileID: 1758050358}
   - 58: {fileID: 1758050357}
+  - 50: {fileID: 1758050362}
   m_Layer: 0
   m_Name: spaceship 3
   m_TagString: Untagged
@@ -19015,6 +19243,21 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 6
+--- !u!50 &1758050362
+Rigidbody2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1758050356}
+  m_Mass: 1
+  m_LinearDrag: .400000006
+  m_AngularDrag: .0500000007
+  m_GravityScale: 0
+  m_FixedAngle: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
 --- !u!1 &1759435814
 GameObject:
   m_ObjectHideFlags: 0
@@ -19859,6 +20102,7 @@ GameObject:
   - 114: {fileID: 1847958385}
   - 114: {fileID: 1847958384}
   - 58: {fileID: 1847958383}
+  - 50: {fileID: 1847958388}
   m_Layer: 0
   m_Name: spaceship 1
   m_TagString: Untagged
@@ -19953,6 +20197,21 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 8
+--- !u!50 &1847958388
+Rigidbody2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1847958382}
+  m_Mass: 1
+  m_LinearDrag: .400000006
+  m_AngularDrag: .0500000007
+  m_GravityScale: 0
+  m_FixedAngle: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
 --- !u!1 &1854914731
 GameObject:
   m_ObjectHideFlags: 0
@@ -21227,6 +21486,7 @@ GameObject:
   - 114: {fileID: 1948037843}
   - 114: {fileID: 1948037842}
   - 58: {fileID: 1948037841}
+  - 50: {fileID: 1948037846}
   m_Layer: 0
   m_Name: spaceship 4
   m_TagString: Untagged
@@ -21321,6 +21581,21 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 5
+--- !u!50 &1948037846
+Rigidbody2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1948037840}
+  m_Mass: 1
+  m_LinearDrag: .400000006
+  m_AngularDrag: .0500000007
+  m_GravityScale: 0
+  m_FixedAngle: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
 --- !u!1 &1950350329
 GameObject:
   m_ObjectHideFlags: 0
@@ -22570,6 +22845,7 @@ GameObject:
   - 114: {fileID: 2070774194}
   - 114: {fileID: 2070774193}
   - 58: {fileID: 2070774192}
+  - 50: {fileID: 2070774197}
   m_Layer: 0
   m_Name: spaceship 2
   m_TagString: Untagged
@@ -22664,6 +22940,21 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 7
+--- !u!50 &2070774197
+Rigidbody2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2070774191}
+  m_Mass: 1
+  m_LinearDrag: .400000006
+  m_AngularDrag: .0500000007
+  m_GravityScale: 0
+  m_FixedAngle: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
 --- !u!1 &2074777240
 GameObject:
   m_ObjectHideFlags: 0
@@ -23589,6 +23880,7 @@ GameObject:
   - 114: {fileID: 2143169662}
   - 114: {fileID: 2143169661}
   - 58: {fileID: 2143169660}
+  - 50: {fileID: 2143169665}
   m_Layer: 0
   m_Name: spaceship 8
   m_TagString: Untagged
@@ -23683,6 +23975,21 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1
+--- !u!50 &2143169665
+Rigidbody2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2143169659}
+  m_Mass: 1
+  m_LinearDrag: .400000006
+  m_AngularDrag: .0500000007
+  m_GravityScale: 0
+  m_FixedAngle: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
 --- !u!1 &2146631264
 GameObject:
   m_ObjectHideFlags: 0
