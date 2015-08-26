@@ -8,14 +8,20 @@ public class Grenade : MonoBehaviour {
     public float blastTime;
 
     bool exploded = false;
+    new Collider2D collider;
+    new Rigidbody2D rigidbody;
 
 
 
     void Start()
     {
+        collider = GetComponent<Collider2D>();
+        collider.isTrigger = false;
+        rigidbody = GetComponent<Rigidbody2D>();
         StartCoroutine(FuseCountdown());
     }
 
+    //countdown initiated on instantiation
     IEnumerator FuseCountdown()
     {
         yield return new WaitForSeconds(fuseTime);
@@ -26,15 +32,41 @@ public class Grenade : MonoBehaviour {
         }
     }
 
+    //initiates the explosion
     void Explode()
     {
         exploded = true;
-
-        //////////////////////////
-        //EXPLOSION CODE GOES HERE
-        //////////////////////////
+        collider.isTrigger = true;
+        rigidbody.velocity = Vector2.zero;
+        StartCoroutine(ExplodeRoutine());
     }
 
+    //coroutine for the explosion animation
+    IEnumerator ExplodeRoutine()
+    {
+        Vector3 startScale = transform.localScale;
+        float timer = 0f;
+
+        while(timer <= (blastTime * 0.8f))
+        {
+            transform.localScale = Vector3.Lerp(startScale, startScale * blastRadius, timer / (blastTime * 0.8f));
+            timer += Time.deltaTime;
+            yield return null;
+        }
+
+        timer = 0f;
+
+        while(timer <= (blastTime * 0.2f))
+        {
+            transform.localScale = Vector3.MoveTowards(transform.localScale, Vector3.zero, timer / (blastTime * 0.2f));
+            timer += Time.deltaTime;
+            yield return null;
+        }
+
+        Destroy(gameObject);
+    }
+
+    //collider starts off as solid
     void OnCollisionEnter2D(Collision2D col)
     {
         //if the grenade collides with something explodable, start exploding
@@ -46,6 +78,7 @@ public class Grenade : MonoBehaviour {
         }
     }
 
+    //collider is switched to a trigger upon explosion
     void OnTriggerEnter2D(Collider2D col)
     {
         //if any IExplodables are caught in the blast radius, call their Explode methods

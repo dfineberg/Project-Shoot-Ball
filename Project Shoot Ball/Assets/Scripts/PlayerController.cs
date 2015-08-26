@@ -7,6 +7,9 @@ public class PlayerController : MonoBehaviour {
     public float moveSpeed;
     public float accelleration;
     public float turnSpeed;
+    public float shotPower;
+    public GameObject projectile;
+    public GameObject projectileShotPos;
 
     IGetPlayerInput myInputComponent;
     PlayerInput myInput;
@@ -52,7 +55,27 @@ public class PlayerController : MonoBehaviour {
     {
         if (myInput.GetActionDown())
         {
-            Debug.Log("perform action");
+            Shoot();
+        }
+    }
+
+    void Shoot()
+    {
+        if(projectile != null)
+        {
+            if(projectileShotPos != null)
+            {
+                GameObject newProj = (GameObject)Instantiate(projectile, projectileShotPos.transform.TransformPoint(Vector3.zero), Quaternion.identity);
+                newProj.GetComponent<Rigidbody2D>().AddForce(transform.TransformDirection(Vector3.up) * shotPower, ForceMode2D.Impulse);
+            }
+            else
+            {
+                Debug.Log("projectileShotPos is null");
+            }
+        }
+        else
+        {
+            Debug.Log("Projectile is null");
         }
     }
 }
