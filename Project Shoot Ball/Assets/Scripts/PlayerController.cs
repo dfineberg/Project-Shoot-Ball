@@ -8,12 +8,18 @@ public class PlayerController : MonoBehaviour {
     public float accelleration;
     public float turnSpeed;
     public float shotPower;
+    public float throwPower;
     public GameObject projectile;
-    public GameObject projectileShotPos;
+    public Transform projectileShotPos;
+    [HideInInspector]
+    public bool hasBall = false;
 
     IGetPlayerInput myInputComponent;
     PlayerInput myInput;
     new Rigidbody2D rigidbody;
+    GameObject ball;
+    Collider2D ballCol;
+    Rigidbody2D ballRigidbody;
 
 
     void Start()
@@ -21,6 +27,9 @@ public class PlayerController : MonoBehaviour {
         myInputComponent = GetComponent(typeof(IGetPlayerInput)) as IGetPlayerInput;
         rigidbody = GetComponent<Rigidbody2D>();
         myInput = new PlayerInput();
+        ball = GameObject.FindGameObjectWithTag("Ball");
+        ballCol = ball.GetComponent<Collider2D>();
+        ballRigidbody = ball.GetComponent<Rigidbody2D>();
     }
 
     void Update()
@@ -38,6 +47,14 @@ public class PlayerController : MonoBehaviour {
         rigidbody.velocity = Vector2.ClampMagnitude(rigidbody.velocity, moveSpeed);
     }
 
+    void OnCollisionEnter2D(Collision2D col)
+    {
+        if(col.gameObject == ball && !hasBall)
+        {
+            CatchBall();
+        }
+    }
+
     //checks to see if the player is aiming and rotates the character accordingly
     void RotatePlayer()
     {
@@ -50,12 +67,19 @@ public class PlayerController : MonoBehaviour {
         }
     }
 
-    //checks if the player is performing a primary action (shooting)
+    //checks if the player is performing a primary action (shooting/throwing)
     void ActionCheck()
     {
         if (myInput.GetActionDown())
         {
-            Shoot();
+            if (!hasBall)
+            {
+                Shoot();
+            }
+            else
+            {
+                ThrowBall();
+            }
         }
     }
 
@@ -65,7 +89,7 @@ public class PlayerController : MonoBehaviour {
         {
             if(projectileShotPos != null)
             {
-                GameObject newProj = (GameObject)Instantiate(projectile, projectileShotPos.transform.TransformPoint(Vector3.zero), Quaternion.identity);
+                GameObject newProj = (GameObject)Instantiate(projectile, projectileShotPos.TransformPoint(Vector3.zero), Quaternion.identity);
                 newProj.GetComponent<Rigidbody2D>().AddForce(transform.TransformDirection(Vector3.up) * shotPower, ForceMode2D.Impulse);
             }
             else
@@ -77,5 +101,30 @@ public class PlayerController : MonoBehaviour {
         {
             Debug.Log("Projectile is null");
         }
+    }
+
+    void CatchBall()
+    {
+        ballCol.isTrigger = true;
+        ballRigidbody.velocity = Vector2.zero;
+        ballRigidbody.isKinematic = true;
+        ball.transform.SetParent(transform);
+        ball.transform.localPosition = projectileShotPos.localPosition;
+        hasBall = true;
+    }
+
+    void ThrowBall()
+    {
+        ballCol.isTrigger = false;
+        ball.transform.SetParent(null);
+        ballRigidbody.isKinematic = false;
+        ballRigidbody.AddForce(transform.TransformDirection(Vector3.up).normalized * throwPower, ForceMode2D.Impulse);
+        StartCoroutine(ThrowRoutine());
+    }
+
+    IEnumerator ThrowRoutine()
+    {
+        yield return new WaitForSeconds(0.1f);
+        hasBall = false;
     }
 }
