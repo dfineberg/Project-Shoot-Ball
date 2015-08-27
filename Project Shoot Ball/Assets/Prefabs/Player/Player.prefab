@@ -179,6 +179,11 @@ MonoBehaviour:
   moveSpeed: 25
   accelleration: 60
   turnSpeed: 700
+  shotPower: 5
+  throwPower: 7
+  projectile: {fileID: 109418, guid: 67d04dfc73aee364399617c27e9b9fcc, type: 2}
+  projectileShotPos: {fileID: 414004}
+  hasBall: 0
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
