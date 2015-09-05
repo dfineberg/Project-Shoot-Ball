@@ -21,6 +21,9 @@ public class PlayerController : MonoBehaviour {
     Collider2D ballCol;
     Rigidbody2D ballRigidbody;
 
+    public delegate void PlayerEvent(PlayerController player);
+    public static event PlayerEvent e_catchBall;
+
 
     void Start()
     {
@@ -111,6 +114,11 @@ public class PlayerController : MonoBehaviour {
         ball.transform.SetParent(transform);
         ball.transform.localPosition = projectileShotPos.localPosition;
         hasBall = true;
+
+        if(e_catchBall != null)
+        {
+            e_catchBall(this);
+        }
     }
 
     void ThrowBall()

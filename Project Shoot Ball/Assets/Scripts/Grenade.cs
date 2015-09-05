@@ -75,6 +75,7 @@ public class Grenade : MonoBehaviour {
         if(explodable != null)
         {
             Explode();
+            explodable.Explode();
         }
     }
 

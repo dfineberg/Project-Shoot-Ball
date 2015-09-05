@@ -6,7 +6,7 @@ public class BallFollow : MonoBehaviour {
 
     PolyNavAgent agent;
     GameObject ball;
-    public static bool chasing = true;
+    public static bool following = false;
 
     void Start()
     {
@@ -16,7 +16,7 @@ public class BallFollow : MonoBehaviour {
 
     void Update()
     {
-        if (chasing)
+        if (following)
         {
             agent.SetDestination(ball.transform.position);
         }

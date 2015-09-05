@@ -180,7 +180,7 @@ GameObject:
   - 114: {fileID: 20120612}
   m_Layer: 0
   m_Name: Tile_17_4
-  m_TagString: Untagged
+  m_TagString: Spawn1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -314,7 +314,7 @@ GameObject:
   - 114: {fileID: 31769418}
   m_Layer: 0
   m_Name: Tile_4_3
-  m_TagString: Untagged
+  m_TagString: Spawn2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -462,7 +462,7 @@ GameObject:
   - 114: {fileID: 44635927}
   m_Layer: 0
   m_Name: Tile_17_3
-  m_TagString: Untagged
+  m_TagString: Spawn1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -772,7 +772,7 @@ GameObject:
   - 114: {fileID: 64696404}
   m_Layer: 0
   m_Name: Tile_3_10
-  m_TagString: Untagged
+  m_TagString: Spawn3
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -839,7 +839,7 @@ GameObject:
   - 114: {fileID: 66898220}
   m_Layer: 0
   m_Name: Tile_16_12
-  m_TagString: Untagged
+  m_TagString: Spawn0
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1766,7 +1766,7 @@ GameObject:
   - 114: {fileID: 173300165}
   m_Layer: 0
   m_Name: Tile_16_2
-  m_TagString: Untagged
+  m_TagString: Spawn1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1900,7 +1900,7 @@ GameObject:
   - 114: {fileID: 177563982}
   m_Layer: 0
   m_Name: Tile_3_11
-  m_TagString: Untagged
+  m_TagString: Spawn3
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2065,7 +2065,7 @@ Transform:
   - {fileID: 1193221942}
   - {fileID: 515728217}
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 12
 --- !u!114 &193472493
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2099,7 +2099,7 @@ GameObject:
   - 114: {fileID: 195849658}
   m_Layer: 0
   m_Name: Tile_15_3
-  m_TagString: Untagged
+  m_TagString: Spawn1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2314,7 +2314,7 @@ GameObject:
   - 114: {fileID: 217756165}
   m_Layer: 0
   m_Name: Tile_16_11
-  m_TagString: Untagged
+  m_TagString: Spawn0
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2596,7 +2596,7 @@ GameObject:
   - 114: {fileID: 258464915}
   m_Layer: 0
   m_Name: Tile_1_1
-  m_TagString: Untagged
+  m_TagString: Spawn2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2769,7 +2769,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 412956, guid: 5432f75a5ef73ae459ccaf601d734066, type: 2}
       propertyPath: m_RootOrder
-      value: 14
+      value: 15
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5432f75a5ef73ae459ccaf601d734066, type: 2}
@@ -3431,7 +3431,7 @@ GameObject:
   - 114: {fileID: 290548463}
   m_Layer: 0
   m_Name: Tile_1_2
-  m_TagString: Untagged
+  m_TagString: Spawn2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3565,7 +3565,7 @@ GameObject:
   - 114: {fileID: 309030461}
   m_Layer: 0
   m_Name: Tile_4_4
-  m_TagString: Untagged
+  m_TagString: Spawn2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4426,6 +4426,7 @@ GameObject:
   - 58: {fileID: 398398764}
   - 50: {fileID: 398398769}
   - 114: {fileID: 398398765}
+  - 114: {fileID: 398398770}
   m_Layer: 0
   m_Name: spaceship 9
   m_TagString: Untagged
@@ -4519,7 +4520,7 @@ Transform:
   m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 1
 --- !u!50 &398398769
 Rigidbody2D:
   m_ObjectHideFlags: 0
@@ -4535,6 +4536,17 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
+--- !u!114 &398398770
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 398398763}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ffcd04e9c63ad4f4c973cce76e405498, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &400669195
 GameObject:
   m_ObjectHideFlags: 0
@@ -4710,6 +4722,7 @@ GameObject:
   - 58: {fileID: 405579537}
   - 50: {fileID: 405579538}
   - 114: {fileID: 405579533}
+  - 114: {fileID: 405579539}
   m_Layer: 0
   m_Name: spaceship
   m_TagString: Untagged
@@ -4790,7 +4803,7 @@ Transform:
   m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 10
 --- !u!58 &405579537
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -4819,6 +4832,17 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
+--- !u!114 &405579539
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 405579532}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ffcd04e9c63ad4f4c973cce76e405498, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &419309485
 GameObject:
   m_ObjectHideFlags: 0
@@ -4912,7 +4936,7 @@ GameObject:
   - 114: {fileID: 421203346}
   m_Layer: 0
   m_Name: Tile_18_10
-  m_TagString: Untagged
+  m_TagString: Spawn0
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4979,7 +5003,7 @@ GameObject:
   - 114: {fileID: 427261073}
   m_Layer: 0
   m_Name: Tile_2_13
-  m_TagString: Untagged
+  m_TagString: Spawn3
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5194,7 +5218,7 @@ GameObject:
   - 114: {fileID: 458085112}
   m_Layer: 0
   m_Name: Tile_3_12
-  m_TagString: Untagged
+  m_TagString: Spawn3
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5342,7 +5366,7 @@ GameObject:
   - 114: {fileID: 465729361}
   m_Layer: 0
   m_Name: Tile_16_4
-  m_TagString: Untagged
+  m_TagString: Spawn1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5410,6 +5434,7 @@ GameObject:
   - 58: {fileID: 468055862}
   - 50: {fileID: 468055867}
   - 114: {fileID: 468055863}
+  - 114: {fileID: 468055868}
   m_Layer: 0
   m_Name: spaceship 5
   m_TagString: Untagged
@@ -5503,7 +5528,7 @@ Transform:
   m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
 --- !u!50 &468055867
 Rigidbody2D:
   m_ObjectHideFlags: 0
@@ -5519,6 +5544,17 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
+--- !u!114 &468055868
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 468055861}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ffcd04e9c63ad4f4c973cce76e405498, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &469921897
 GameObject:
   m_ObjectHideFlags: 0
@@ -5531,7 +5567,7 @@ GameObject:
   - 114: {fileID: 469921899}
   m_Layer: 0
   m_Name: Tile_18_13
-  m_TagString: Untagged
+  m_TagString: Spawn0
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5665,7 +5701,7 @@ GameObject:
   - 114: {fileID: 479974424}
   m_Layer: 0
   m_Name: Tile_15_10
-  m_TagString: Untagged
+  m_TagString: Spawn0
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5894,7 +5930,7 @@ GameObject:
   - 114: {fileID: 511721955}
   m_Layer: 0
   m_Name: Tile_17_1
-  m_TagString: Untagged
+  m_TagString: Spawn1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5961,7 +5997,7 @@ GameObject:
   - 114: {fileID: 515104442}
   m_Layer: 0
   m_Name: Tile_1_12
-  m_TagString: Untagged
+  m_TagString: Spawn3
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6589,7 +6625,7 @@ GameObject:
   - 114: {fileID: 529359355}
   m_Layer: 0
   m_Name: Tile_3_4
-  m_TagString: Untagged
+  m_TagString: Spawn2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6737,7 +6773,7 @@ GameObject:
   - 114: {fileID: 548747251}
   m_Layer: 0
   m_Name: Tile_16_10
-  m_TagString: Untagged
+  m_TagString: Spawn0
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7023,7 +7059,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 11
 --- !u!1 &579171534
 GameObject:
   m_ObjectHideFlags: 0
@@ -7103,7 +7139,7 @@ GameObject:
   - 114: {fileID: 582720704}
   m_Layer: 0
   m_Name: Tile_16_3
-  m_TagString: Untagged
+  m_TagString: Spawn1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7170,7 +7206,7 @@ GameObject:
   - 114: {fileID: 595711804}
   m_Layer: 0
   m_Name: Tile_3_2
-  m_TagString: Untagged
+  m_TagString: Spawn2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7237,7 +7273,7 @@ GameObject:
   - 114: {fileID: 597847593}
   m_Layer: 0
   m_Name: Tile_15_13
-  m_TagString: Untagged
+  m_TagString: Spawn0
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7371,7 +7407,7 @@ GameObject:
   - 114: {fileID: 614056394}
   m_Layer: 0
   m_Name: Tile_2_3
-  m_TagString: Untagged
+  m_TagString: Spawn2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7787,7 +7823,7 @@ GameObject:
   - 114: {fileID: 639496270}
   m_Layer: 0
   m_Name: Tile_2_4
-  m_TagString: Untagged
+  m_TagString: Spawn2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8150,7 +8186,7 @@ GameObject:
   - 114: {fileID: 667226807}
   m_Layer: 0
   m_Name: Tile_15_12
-  m_TagString: Untagged
+  m_TagString: Spawn0
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8284,7 +8320,7 @@ GameObject:
   - 114: {fileID: 673022431}
   m_Layer: 0
   m_Name: Tile_17_2
-  m_TagString: Untagged
+  m_TagString: Spawn1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8781,7 +8817,7 @@ GameObject:
   - 114: {fileID: 711515069}
   m_Layer: 0
   m_Name: Tile_17_11
-  m_TagString: Untagged
+  m_TagString: Spawn0
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9345,7 +9381,7 @@ GameObject:
   - 114: {fileID: 745736459}
   m_Layer: 0
   m_Name: Tile_2_10
-  m_TagString: Untagged
+  m_TagString: Spawn3
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9694,7 +9730,7 @@ GameObject:
   - 114: {fileID: 767461802}
   m_Layer: 0
   m_Name: Tile_18_11
-  m_TagString: Untagged
+  m_TagString: Spawn0
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10057,7 +10093,7 @@ GameObject:
   - 114: {fileID: 798044759}
   m_Layer: 0
   m_Name: Tile_18_3
-  m_TagString: Untagged
+  m_TagString: Spawn1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10649,7 +10685,7 @@ GameObject:
   - 114: {fileID: 866625108}
   m_Layer: 0
   m_Name: Tile_1_13
-  m_TagString: Untagged
+  m_TagString: Spawn3
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10917,7 +10953,7 @@ GameObject:
   - 114: {fileID: 924175766}
   m_Layer: 0
   m_Name: Tile_16_1
-  m_TagString: Untagged
+  m_TagString: Spawn1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11495,7 +11531,7 @@ GameObject:
   - 114: {fileID: 973784655}
   m_Layer: 0
   m_Name: Tile_2_12
-  m_TagString: Untagged
+  m_TagString: Spawn3
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11844,7 +11880,7 @@ GameObject:
   - 114: {fileID: 1025927442}
   m_Layer: 0
   m_Name: Tile_3_3
-  m_TagString: Untagged
+  m_TagString: Spawn2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12767,7 +12803,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 13
 --- !u!114 &1144168586
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12981,6 +13017,45 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300556, guid: 8cb5a665754e67c40ada08ca5594cf88, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!1 &1162086819
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1162086821}
+  - 114: {fileID: 1162086820}
+  m_Layer: 0
+  m_Name: GameController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1162086820
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1162086819}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0641150e59f57de4aa4a046756f47a8c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &1162086821
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1162086819}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
 --- !u!1 &1183506297
 GameObject:
   m_ObjectHideFlags: 0
@@ -13868,7 +13943,7 @@ GameObject:
   - 114: {fileID: 1195421962}
   m_Layer: 0
   m_Name: Tile_2_11
-  m_TagString: Untagged
+  m_TagString: Spawn3
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14689,7 +14764,7 @@ GameObject:
   - 114: {fileID: 1293895335}
   m_Layer: 0
   m_Name: Tile_4_10
-  m_TagString: Untagged
+  m_TagString: Spawn3
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -15081,6 +15156,7 @@ GameObject:
   - 58: {fileID: 1346659183}
   - 50: {fileID: 1346659188}
   - 114: {fileID: 1346659184}
+  - 114: {fileID: 1346659189}
   m_Layer: 0
   m_Name: spaceship 6
   m_TagString: Untagged
@@ -15174,7 +15250,7 @@ Transform:
   m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
 --- !u!50 &1346659188
 Rigidbody2D:
   m_ObjectHideFlags: 0
@@ -15190,6 +15266,17 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
+--- !u!114 &1346659189
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1346659182}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ffcd04e9c63ad4f4c973cce76e405498, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1351518182
 GameObject:
   m_ObjectHideFlags: 0
@@ -16048,7 +16135,7 @@ GameObject:
   - 114: {fileID: 1449021249}
   m_Layer: 0
   m_Name: Tile_4_12
-  m_TagString: Untagged
+  m_TagString: Spawn3
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -16196,7 +16283,7 @@ GameObject:
   - 114: {fileID: 1467961146}
   m_Layer: 0
   m_Name: Tile_17_10
-  m_TagString: Untagged
+  m_TagString: Spawn0
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -16288,7 +16375,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 474516, guid: 103f740d47344c84fbc38c50791a941c, type: 2}
       propertyPath: m_RootOrder
-      value: 13
+      value: 14
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 103f740d47344c84fbc38c50791a941c, type: 2}
@@ -16372,7 +16459,7 @@ GameObject:
   - 114: {fileID: 1482981776}
   m_Layer: 0
   m_Name: Tile_1_4
-  m_TagString: Untagged
+  m_TagString: Spawn2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -16641,6 +16728,7 @@ GameObject:
   - 58: {fileID: 1515034049}
   - 50: {fileID: 1515034054}
   - 114: {fileID: 1515034050}
+  - 114: {fileID: 1515034055}
   m_Layer: 0
   m_Name: spaceship 7
   m_TagString: Untagged
@@ -16734,7 +16822,7 @@ Transform:
   m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
 --- !u!50 &1515034054
 Rigidbody2D:
   m_ObjectHideFlags: 0
@@ -16750,6 +16838,17 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
+--- !u!114 &1515034055
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1515034048}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ffcd04e9c63ad4f4c973cce76e405498, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1521673682
 GameObject:
   m_ObjectHideFlags: 0
@@ -17044,7 +17143,7 @@ GameObject:
   - 114: {fileID: 1545184904}
   m_Layer: 0
   m_Name: Tile_18_4
-  m_TagString: Untagged
+  m_TagString: Spawn1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -17594,7 +17693,7 @@ GameObject:
   - 114: {fileID: 1592797127}
   m_Layer: 0
   m_Name: Tile_18_2
-  m_TagString: Untagged
+  m_TagString: Spawn1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -17661,7 +17760,7 @@ GameObject:
   - 114: {fileID: 1598266845}
   m_Layer: 0
   m_Name: Tile_17_12
-  m_TagString: Untagged
+  m_TagString: Spawn0
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -17890,7 +17989,7 @@ GameObject:
   - 114: {fileID: 1636626983}
   m_Layer: 0
   m_Name: Tile_15_4
-  m_TagString: Untagged
+  m_TagString: Spawn1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -18482,7 +18581,7 @@ GameObject:
   - 114: {fileID: 1706560224}
   m_Layer: 0
   m_Name: Tile_4_11
-  m_TagString: Untagged
+  m_TagString: Spawn3
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -18549,7 +18648,7 @@ GameObject:
   - 114: {fileID: 1712894163}
   m_Layer: 0
   m_Name: Tile_17_13
-  m_TagString: Untagged
+  m_TagString: Spawn0
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -18683,7 +18782,7 @@ GameObject:
   - 114: {fileID: 1725950432}
   m_Layer: 0
   m_Name: Tile_15_11
-  m_TagString: Untagged
+  m_TagString: Spawn0
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -18750,7 +18849,7 @@ GameObject:
   - 114: {fileID: 1733351250}
   m_Layer: 0
   m_Name: Tile_18_1
-  m_TagString: Untagged
+  m_TagString: Spawn1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -18884,7 +18983,7 @@ GameObject:
   - 114: {fileID: 1743924781}
   m_Layer: 0
   m_Name: Tile_1_10
-  m_TagString: Untagged
+  m_TagString: Spawn3
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -19086,6 +19185,7 @@ GameObject:
   - 58: {fileID: 1758050357}
   - 50: {fileID: 1758050362}
   - 114: {fileID: 1758050358}
+  - 114: {fileID: 1758050363}
   m_Layer: 0
   m_Name: spaceship 3
   m_TagString: Untagged
@@ -19179,7 +19279,7 @@ Transform:
   m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
 --- !u!50 &1758050362
 Rigidbody2D:
   m_ObjectHideFlags: 0
@@ -19195,6 +19295,17 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
+--- !u!114 &1758050363
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1758050356}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ffcd04e9c63ad4f4c973cce76e405498, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1759435814
 GameObject:
   m_ObjectHideFlags: 0
@@ -19838,7 +19949,7 @@ GameObject:
   - 114: {fileID: 1809541511}
   m_Layer: 0
   m_Name: Tile_15_1
-  m_TagString: Untagged
+  m_TagString: Spawn1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -19905,7 +20016,7 @@ GameObject:
   - 114: {fileID: 1821845042}
   m_Layer: 0
   m_Name: Tile_3_1
-  m_TagString: Untagged
+  m_TagString: Spawn2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -19972,7 +20083,7 @@ GameObject:
   - 114: {fileID: 1842884973}
   m_Layer: 0
   m_Name: Tile_16_13
-  m_TagString: Untagged
+  m_TagString: Spawn0
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -20040,6 +20151,7 @@ GameObject:
   - 58: {fileID: 1847958383}
   - 50: {fileID: 1847958388}
   - 114: {fileID: 1847958384}
+  - 114: {fileID: 1847958389}
   m_Layer: 0
   m_Name: spaceship 1
   m_TagString: Untagged
@@ -20133,7 +20245,7 @@ Transform:
   m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 9
 --- !u!50 &1847958388
 Rigidbody2D:
   m_ObjectHideFlags: 0
@@ -20149,6 +20261,17 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
+--- !u!114 &1847958389
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1847958382}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ffcd04e9c63ad4f4c973cce76e405498, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1854914731
 GameObject:
   m_ObjectHideFlags: 0
@@ -20887,7 +21010,7 @@ GameObject:
   - 114: {fileID: 1915346337}
   m_Layer: 0
   m_Name: Tile_15_2
-  m_TagString: Untagged
+  m_TagString: Spawn1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -21021,7 +21144,7 @@ GameObject:
   - 114: {fileID: 1927123183}
   m_Layer: 0
   m_Name: Tile_4_2
-  m_TagString: Untagged
+  m_TagString: Spawn2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -21088,7 +21211,7 @@ GameObject:
   - 114: {fileID: 1933417370}
   m_Layer: 0
   m_Name: Tile_1_3
-  m_TagString: Untagged
+  m_TagString: Spawn2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -21289,7 +21412,7 @@ GameObject:
   - 114: {fileID: 1942517057}
   m_Layer: 0
   m_Name: Tile_3_13
-  m_TagString: Untagged
+  m_TagString: Spawn3
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -21424,6 +21547,7 @@ GameObject:
   - 58: {fileID: 1948037841}
   - 50: {fileID: 1948037846}
   - 114: {fileID: 1948037842}
+  - 114: {fileID: 1948037847}
   m_Layer: 0
   m_Name: spaceship 4
   m_TagString: Untagged
@@ -21517,7 +21641,7 @@ Transform:
   m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
 --- !u!50 &1948037846
 Rigidbody2D:
   m_ObjectHideFlags: 0
@@ -21533,6 +21657,17 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
+--- !u!114 &1948037847
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1948037840}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ffcd04e9c63ad4f4c973cce76e405498, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1950350329
 GameObject:
   m_ObjectHideFlags: 0
@@ -21989,7 +22124,7 @@ GameObject:
   - 114: {fileID: 1971107949}
   m_Layer: 0
   m_Name: Tile_4_13
-  m_TagString: Untagged
+  m_TagString: Spawn3
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -22271,7 +22406,7 @@ GameObject:
   - 114: {fileID: 2044438023}
   m_Layer: 0
   m_Name: Tile_4_1
-  m_TagString: Untagged
+  m_TagString: Spawn2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -22419,7 +22554,7 @@ GameObject:
   - 114: {fileID: 2048369426}
   m_Layer: 0
   m_Name: Tile_2_1
-  m_TagString: Untagged
+  m_TagString: Spawn2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -22783,6 +22918,7 @@ GameObject:
   - 58: {fileID: 2070774192}
   - 50: {fileID: 2070774197}
   - 114: {fileID: 2070774193}
+  - 114: {fileID: 2070774198}
   m_Layer: 0
   m_Name: spaceship 2
   m_TagString: Untagged
@@ -22876,7 +23012,7 @@ Transform:
   m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
 --- !u!50 &2070774197
 Rigidbody2D:
   m_ObjectHideFlags: 0
@@ -22892,6 +23028,17 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
+--- !u!114 &2070774198
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2070774191}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ffcd04e9c63ad4f4c973cce76e405498, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2074777240
 GameObject:
   m_ObjectHideFlags: 0
@@ -23052,7 +23199,7 @@ GameObject:
   - 114: {fileID: 2083203137}
   m_Layer: 0
   m_Name: Tile_1_11
-  m_TagString: Untagged
+  m_TagString: Spawn3
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -23334,7 +23481,7 @@ GameObject:
   - 114: {fileID: 2116094042}
   m_Layer: 0
   m_Name: Tile_18_12
-  m_TagString: Untagged
+  m_TagString: Spawn0
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -23401,7 +23548,7 @@ GameObject:
   - 114: {fileID: 2124272160}
   m_Layer: 0
   m_Name: Tile_2_2
-  m_TagString: Untagged
+  m_TagString: Spawn2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -23818,6 +23965,7 @@ GameObject:
   - 58: {fileID: 2143169660}
   - 50: {fileID: 2143169665}
   - 114: {fileID: 2143169661}
+  - 114: {fileID: 2143169666}
   m_Layer: 0
   m_Name: spaceship 8
   m_TagString: Untagged
@@ -23911,7 +24059,7 @@ Transform:
   m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
 --- !u!50 &2143169665
 Rigidbody2D:
   m_ObjectHideFlags: 0
@@ -23927,6 +24075,17 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
+--- !u!114 &2143169666
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2143169659}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ffcd04e9c63ad4f4c973cce76e405498, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2146631264
 GameObject:
   m_ObjectHideFlags: 0

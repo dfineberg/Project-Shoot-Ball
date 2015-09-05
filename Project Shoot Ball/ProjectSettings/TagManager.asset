@@ -5,6 +5,11 @@ TagManager:
   serializedVersion: 2
   tags:
   - Ball
+  - Spawn0
+  - Spawn1
+  - Spawn2
+  - Spawn3
+  - Spawn4
   layers:
   - Default
   - TransparentFX
