@@ -21,4 +21,14 @@ public class BallFollow : MonoBehaviour {
             agent.SetDestination(ball.transform.position);
         }
     }
+
+    public static void Stop()
+    {
+        following = false;
+
+        foreach(PolyNavAgent thisAgent in FindObjectsOfType<PolyNavAgent>())
+        {
+            thisAgent.Stop();
+        }
+    }
 }

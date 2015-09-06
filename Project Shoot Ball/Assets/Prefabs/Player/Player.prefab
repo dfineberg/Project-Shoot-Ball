@@ -132,7 +132,7 @@ Rigidbody2D:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 188920}
   m_Mass: 1
-  m_LinearDrag: 5
+  m_LinearDrag: 10
   m_AngularDrag: .0500000007
   m_GravityScale: 0
   m_FixedAngle: 1
@@ -177,8 +177,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerNo: 1
   moveSpeed: 25
-  accelleration: 60
-  turnSpeed: 700
+  accelleration: 100
+  turnSpeed: 800
   shotPower: 5
   throwPower: 7
   projectile: {fileID: 109418, guid: 67d04dfc73aee364399617c27e9b9fcc, type: 2}

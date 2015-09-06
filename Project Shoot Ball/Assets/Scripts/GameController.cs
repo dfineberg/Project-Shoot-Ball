@@ -16,6 +16,7 @@ public class GameController : MonoBehaviour
     {
         PlayerController.e_catchBall += HandleCatchBall;
         Enemy.e_gotBall += HandleEnemyGotBall;
+        currentState = State.PreGame;
     }
 
     void HandleCatchBall(PlayerController player)
@@ -41,12 +42,16 @@ public class GameController : MonoBehaviour
     void StartGame()
     {
         BallFollow.following = true;
+        SpawnController.StartSpawning();
         currentState = State.Playing;
+        Debug.Log("GameController: Start Game");
     }
 
     void GameOver()
     {
-        BallFollow.following = false;
+        BallFollow.Stop();
+        SpawnController.StopSpawning();
         currentState = State.PostGame;
+        Debug.Log("GameController: Game Over");
     }
 }

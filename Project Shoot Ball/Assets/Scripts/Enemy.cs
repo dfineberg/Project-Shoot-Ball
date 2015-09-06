@@ -3,10 +3,55 @@ using System.Collections;
 
 public class Enemy : MonoBehaviour, IExplodable {
 
+    public float spawnTime;
+
+    SpriteRenderer spriteRenderer;
+    new Collider2D collider;
+    PolyNavAgent polyNavAgent;
+    bool spawning = true;
+
     public delegate void EnemyEvent(Enemy enemy);
     public static event EnemyEvent e_gotBall;
 
-	public void Explode()
+    public static void DestroyAll()
+    {
+        foreach(Enemy enemy in FindObjectsOfType<Enemy>())
+        {
+            Destroy(enemy.gameObject);
+        }
+    }
+
+    void Start()
+    {
+        spriteRenderer = GetComponent<SpriteRenderer>();
+        collider = GetComponent<Collider2D>();
+        polyNavAgent = GetComponent<PolyNavAgent>();
+        StartCoroutine(SpawnRoutine());
+    }
+
+    IEnumerator SpawnRoutine()
+    {
+        StartCoroutine(SpawnFlash());
+        polyNavAgent.enabled = false;
+        collider.enabled = false;
+        yield return new WaitForSeconds(spawnTime);
+        spawning = false;
+        polyNavAgent.enabled = true;
+        collider.enabled = true;
+    }
+
+    IEnumerator SpawnFlash()
+    {
+        while (spawning)
+        {
+            yield return new WaitForSeconds(0.2f);
+            spriteRenderer.enabled = !spriteRenderer.enabled;
+        }
+
+        spriteRenderer.enabled = true;
+    }
+
+    public void Explode()
     {
         Destroy(gameObject);
     }

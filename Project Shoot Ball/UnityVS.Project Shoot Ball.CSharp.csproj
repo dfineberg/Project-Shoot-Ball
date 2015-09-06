@@ -70,11 +70,13 @@
     <Compile Include="Assets\PolyNav2D\Scripts\Runtime\PolyNavAgent.cs" />
     <Compile Include="Assets\PolyNav2D\Scripts\Runtime\PolyNavObstacle.cs" />
     <Compile Include="Assets\Scripts\BallFollow.cs" />
+    <Compile Include="Assets\Scripts\DebugControls.cs" />
     <Compile Include="Assets\Scripts\Enemy.cs" />
     <Compile Include="Assets\Scripts\GameController.cs" />
     <Compile Include="Assets\Scripts\Grenade.cs" />
     <Compile Include="Assets\Scripts\Interfaces.cs" />
     <Compile Include="Assets\Scripts\PlayerController.cs" />
+    <Compile Include="Assets\Scripts\SpawnController.cs" />
     <Compile Include="Assets\Scripts\TileMapNavGenerator.cs" />
     <Compile Include="Assets\Scripts\XboxControllerInput.cs" />
     <Compile Include="Assets\Tile Editor\Scripts\Class\ColliderInfo.cs" />
