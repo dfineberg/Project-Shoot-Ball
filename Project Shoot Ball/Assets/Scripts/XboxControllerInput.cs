@@ -36,6 +36,21 @@ public class XboxControllerInput : MonoBehaviour, IGetPlayerInput {
             input.SetActionDown(false);
         }
 
+        //check if the left trigger is pressed
+        bool secondaryAction = Input.GetAxis("TriggersL_" + myPlayer.playerNo) > TRIGGERS_THRESHOLD ? true : false;
+
+        //if secondaryAction was false and is now true, set secondaryActionDown to true
+        if (!input.GetSecondaryAction() && secondaryAction)
+        {
+            input.SetSecondaryActionDown(true);
+        }
+        else
+        {
+            //otherwise secondaryActionDown is false
+            input.SetSecondaryActionDown(false);
+        }
+
         input.SetAction(action);
+        input.SetSecondaryAction(secondaryAction);
     }
 }

@@ -9,17 +9,23 @@ public class PlayerController : MonoBehaviour {
     public float turnSpeed;
     public float shotPower;
     public float throwPower;
+    public float gravityFieldPower;
+    [Range(0f, 1f)]
+    public float gravityFieldWalkSpeed;
     public GameObject projectile;
     public Transform projectileShotPos;
     [HideInInspector]
     public bool hasBall = false;
+    public bool gravityFieldActive { get; private set; }
 
     IGetPlayerInput myInputComponent;
     PlayerInput myInput;
     new Rigidbody2D rigidbody;
+    CircleCollider2D gravityFieldTrigger;
     GameObject ball;
     Collider2D ballCol;
     Rigidbody2D ballRigidbody;
+    ParticleSystem gravityParticles;
 
     public delegate void PlayerEvent(PlayerController player);
     public static event PlayerEvent e_catchBall;
@@ -33,6 +39,17 @@ public class PlayerController : MonoBehaviour {
         ball = GameObject.FindGameObjectWithTag("Ball");
         ballCol = ball.GetComponent<Collider2D>();
         ballRigidbody = ball.GetComponent<Rigidbody2D>();
+        gravityParticles = GetComponent<ParticleSystem>();
+        gravityParticles.Stop();
+
+        foreach(CircleCollider2D col in GetComponents<CircleCollider2D>())
+        {
+            if (col.isTrigger)
+            {
+                gravityFieldTrigger = col;
+                break;
+            }
+        }
     }
 
     void Update()
@@ -42,12 +59,13 @@ public class PlayerController : MonoBehaviour {
 
         RotatePlayer();
         ActionCheck();
+        GravityFieldCheck();
     }
 
     void FixedUpdate()
     {
         rigidbody.AddForce(myInput.GetMovement().normalized * accelleration);
-        rigidbody.velocity = Vector2.ClampMagnitude(rigidbody.velocity, moveSpeed);
+        rigidbody.velocity = Vector2.ClampMagnitude(rigidbody.velocity, gravityFieldActive ? moveSpeed * gravityFieldWalkSpeed : moveSpeed);
     }
 
     void OnCollisionEnter2D(Collision2D col)
@@ -55,6 +73,17 @@ public class PlayerController : MonoBehaviour {
         if(col.gameObject == ball && !hasBall)
         {
             CatchBall();
+        }
+    }
+
+    void OnTriggerStay2D(Collider2D col)
+    {
+        if(col == ballCol && gravityFieldActive)
+        {
+            Vector3 relativeDir = transform.position - ball.transform.position;
+            float forceProportion = 1 - (relativeDir.sqrMagnitude / (gravityFieldTrigger.radius * gravityFieldTrigger.radius));
+            forceProportion = Mathf.Clamp01(forceProportion);
+            ballRigidbody.AddForce(relativeDir.normalized * (gravityFieldPower * forceProportion) * Time.deltaTime);
         }
     }
 
@@ -83,6 +112,23 @@ public class PlayerController : MonoBehaviour {
             {
                 ThrowBall();
             }
+        }
+    }
+
+    void GravityFieldCheck()
+    {
+        if (myInput.GetSecondaryAction())
+        {
+            if (gravityParticles.isStopped)
+            {
+                gravityParticles.Play();
+                gravityFieldActive = true;
+            }
+        }
+        else if (gravityParticles.isPlaying)
+        {
+            gravityParticles.Stop();
+            gravityFieldActive = false;
         }
     }
 

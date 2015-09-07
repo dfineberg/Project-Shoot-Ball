@@ -9,6 +9,9 @@ public class PlayerInput
     bool actionDown = false;
     bool action = false;
 
+    bool secondaryActionDown = false;
+    bool secondaryAction = false;
+
     public void SetMovement(Vector2 newInput)
     {
         movementInput = newInput;
@@ -47,6 +50,26 @@ public class PlayerInput
     public bool GetActionDown()
     {
         return actionDown;
+    }
+
+    public void SetSecondaryAction(bool newAction)
+    {
+        secondaryAction = newAction;
+    }
+
+    public bool GetSecondaryAction()
+    {
+        return secondaryAction;
+    }
+
+    public void SetSecondaryActionDown(bool newAction)
+    {
+        secondaryActionDown = newAction;
+    }
+
+    public bool GetSecondaryActionDown()
+    {
+        return secondaryActionDown;
     }
 }
 
