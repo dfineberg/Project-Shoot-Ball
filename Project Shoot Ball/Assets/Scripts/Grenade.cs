@@ -47,18 +47,18 @@ public class Grenade : MonoBehaviour {
         Vector3 startScale = transform.localScale;
         float timer = 0f;
 
-        while(timer <= (blastTime * 0.8f))
+        while(timer <= (blastTime * 0.5f))
         {
-            transform.localScale = Vector3.Lerp(startScale, startScale * blastRadius, timer / (blastTime * 0.8f));
+            transform.localScale = Vector3.Lerp(startScale, startScale * blastRadius, timer / (blastTime * 0.5f));
             timer += Time.deltaTime;
             yield return null;
         }
 
         timer = 0f;
 
-        while(timer <= (blastTime * 0.2f))
+        while(timer <= (blastTime * 0.5f))
         {
-            transform.localScale = Vector3.MoveTowards(transform.localScale, Vector3.zero, timer / (blastTime * 0.2f));
+            transform.localScale = Vector3.MoveTowards(transform.localScale, Vector3.zero, timer / (blastTime * 0.5f));
             timer += Time.deltaTime;
             yield return null;
         }

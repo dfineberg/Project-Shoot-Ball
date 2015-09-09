@@ -24,11 +24,13 @@ public class GameplayGUI : MonoBehaviour {
     }
 
     public GameObject ammoCounterPrefab;
+    public Text scoreText;
+    public Text gameOverMessage;
 
     List<AmmoCounter> ammoCounters;
     new RectTransform transform;
 
-	void Start()
+	public void InitAmmoCounters()
     {
         ammoCounters = new List<AmmoCounter>();
         transform = GetComponent<RectTransform>();
@@ -51,11 +53,18 @@ public class GameplayGUI : MonoBehaviour {
             Vector2 anchoredPos;
             RectTransformUtility.ScreenPointToLocalPointInRectangle(transform, playerScreenPos, Camera.main, out anchoredPos);
             ammoCounters[i].counterTransform.anchoredPosition = anchoredPos;
-
-            Debug.Log("Shots: " + ammoCounters[i].player.GetAmmoCount() + " charge: " + ammoCounters[i].player.GetChargeProportion());
-
             ammoCounters[i].text.text = ammoCounters[i].player.GetAmmoCount().ToString();
             ammoCounters[i].image.fillAmount = ammoCounters[i].player.GetChargeProportion();
         }
+    }
+
+    public void SetScoreText(string newText)
+    {
+        scoreText.text = newText;
+    }
+
+    public void ShowGameOverMessage(bool show)
+    {
+        gameOverMessage.enabled = show;
     }
 }

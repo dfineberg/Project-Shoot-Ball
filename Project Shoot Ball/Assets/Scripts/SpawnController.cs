@@ -34,8 +34,6 @@ public class SpawnController : MonoBehaviour {
             {
                 spawnPositions[i].Add(thisTile.transform.position);
             }
-
-            Debug.Log("Spawn cluster " + i + " contains " + spawnPositions[i].Count + " positions");
         }
     }
 

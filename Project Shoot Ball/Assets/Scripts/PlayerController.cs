@@ -18,10 +18,10 @@ public class PlayerController : MonoBehaviour, IHaveAmmo {
     public Transform projectileShotPos;
     [HideInInspector]
     public bool hasBall = false;
+
     public bool gravityFieldActive { get; private set; }
 
     int currentShots;
-    float chargeProportion = 0f;
     float currentChargeAmount;
 
     IGetPlayerInput myInputComponent;
@@ -90,7 +90,7 @@ public class PlayerController : MonoBehaviour, IHaveAmmo {
             Vector3 relativeDir = transform.position - ball.transform.position;
             float forceProportion = 1 - (relativeDir.sqrMagnitude / (gravityFieldTrigger.radius * gravityFieldTrigger.radius));
             forceProportion = Mathf.Clamp01(forceProportion);
-            ballRigidbody.AddForce(relativeDir.normalized * (gravityFieldPower * forceProportion) * Time.deltaTime);
+            ballRigidbody.AddForce(relativeDir.normalized * (gravityFieldPower * forceProportion) * Time.fixedDeltaTime);
         }
     }
 
