@@ -73,16 +73,19 @@ public class PlayerInput
     }
 }
 
-
-
 public interface IGetPlayerInput
 {
     void GetInput(ref PlayerInput input);
 }
 
-
-
 public interface IExplodable
 {
     void Explode();
+}
+
+public interface IHaveAmmo
+{
+    int GetAmmoCount();
+
+    float GetChargeProportion();
 }

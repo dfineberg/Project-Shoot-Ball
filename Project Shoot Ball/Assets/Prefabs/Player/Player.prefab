@@ -199,6 +199,8 @@ MonoBehaviour:
   throwPower: 7
   gravityFieldPower: 2500
   gravityFieldWalkSpeed: .25
+  maxShots: 5
+  shotRechargeTime: 1
   projectile: {fileID: 109418, guid: 67d04dfc73aee364399617c27e9b9fcc, type: 2}
   projectileShotPos: {fileID: 414004}
   hasBall: 0
@@ -215,7 +217,7 @@ ParticleSystem:
   looping: 1
   prewarm: 1
   playOnAwake: 0
-  moveWithTransform: 0
+  moveWithTransform: 1
   InitialModule:
     enabled: 1
     startLifetime:

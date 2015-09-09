@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class PlayerController : MonoBehaviour {
+public class PlayerController : MonoBehaviour, IHaveAmmo {
 
     public int playerNo;
     public float moveSpeed;
@@ -12,11 +12,17 @@ public class PlayerController : MonoBehaviour {
     public float gravityFieldPower;
     [Range(0f, 1f)]
     public float gravityFieldWalkSpeed;
+    public int maxShots;
+    public float shotRechargeTime;
     public GameObject projectile;
     public Transform projectileShotPos;
     [HideInInspector]
     public bool hasBall = false;
     public bool gravityFieldActive { get; private set; }
+
+    int currentShots;
+    float chargeProportion = 0f;
+    float currentChargeAmount;
 
     IGetPlayerInput myInputComponent;
     PlayerInput myInput;
@@ -41,6 +47,7 @@ public class PlayerController : MonoBehaviour {
         ballRigidbody = ball.GetComponent<Rigidbody2D>();
         gravityParticles = GetComponent<ParticleSystem>();
         gravityParticles.Stop();
+        currentShots = maxShots;
 
         foreach(CircleCollider2D col in GetComponents<CircleCollider2D>())
         {
@@ -134,21 +141,26 @@ public class PlayerController : MonoBehaviour {
 
     void Shoot()
     {
-        if(projectile != null)
+        if(currentShots > 0)
         {
-            if(projectileShotPos != null)
+            currentShots--;
+
+            if (projectile != null)
             {
-                GameObject newProj = (GameObject)Instantiate(projectile, projectileShotPos.TransformPoint(Vector3.zero), Quaternion.identity);
-                newProj.GetComponent<Rigidbody2D>().AddForce(transform.TransformDirection(Vector3.up) * shotPower, ForceMode2D.Impulse);
+                if (projectileShotPos != null)
+                {
+                    GameObject newProj = (GameObject)Instantiate(projectile, projectileShotPos.TransformPoint(Vector3.zero), Quaternion.identity);
+                    newProj.GetComponent<Rigidbody2D>().AddForce(transform.TransformDirection(Vector3.up) * shotPower, ForceMode2D.Impulse);
+                }
+                else
+                {
+                    Debug.Log("projectileShotPos is null");
+                }
             }
             else
             {
-                Debug.Log("projectileShotPos is null");
+                Debug.Log("Projectile is null");
             }
-        }
-        else
-        {
-            Debug.Log("Projectile is null");
         }
     }
 
@@ -161,9 +173,46 @@ public class PlayerController : MonoBehaviour {
         ball.transform.localPosition = projectileShotPos.localPosition;
         hasBall = true;
 
+        if(currentShots < maxShots)
+        {
+            StartCoroutine(AmmoRechargeRoutine());
+        }
+
         if(e_catchBall != null)
         {
             e_catchBall(this);
+        }
+    }
+
+    IEnumerator AmmoRechargeRoutine()
+    {
+        //while the player is holding the ball and ammo is not yet full
+        while (hasBall && currentShots < maxShots)
+        {
+            //if the player has been charging for a full shotRechargeTime, increase the player's ammo count
+            if(currentChargeAmount >= shotRechargeTime)
+            {
+                currentShots++;
+                currentChargeAmount = 0f;
+            }
+            else
+            {
+                currentChargeAmount += Time.deltaTime;
+            }
+
+            yield return null;
+        }
+
+        //if the player no longer has the ball
+        if (!hasBall)
+        {
+            //decrement the chargeAmount to zero
+            while(!hasBall && currentChargeAmount > 0f)
+            {
+                currentChargeAmount -= Time.deltaTime;
+                currentChargeAmount = Mathf.Max(currentChargeAmount, 0f);
+                yield return null;
+            }
         }
     }
 
@@ -180,5 +229,15 @@ public class PlayerController : MonoBehaviour {
     {
         yield return new WaitForSeconds(0.1f);
         hasBall = false;
+    }
+
+    public int GetAmmoCount()
+    {
+        return currentShots;
+    }
+
+    public float GetChargeProportion()
+    {
+        return Mathf.Clamp01(currentChargeAmount / shotRechargeTime);
     }
 }
