@@ -103,8 +103,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fuseTime: 1.5
-  blastRadius: 5
-  blastTime: .5
+  blastRadius: 10
+  blastTime: .400000006
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

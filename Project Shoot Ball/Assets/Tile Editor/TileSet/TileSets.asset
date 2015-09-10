@@ -322,7 +322,7 @@ MonoBehaviour:
       OrderInLayer: 0
       Tag: Untagged
     - Sprite: {fileID: 21300068, guid: 8cb5a665754e67c40ada08ca5594cf88, type: 3}
-      Collision: 0
+      Collision: 1
       PhysicsMaterial: {fileID: 0}
       IsTrigger: 0
       Rotation: 0
@@ -1976,7 +1976,7 @@ MonoBehaviour:
       FlipHorizontally: 0
       FlipVertically: 0
       OrderInLayer: 0
-      Tag: Untagged
+      Tag: Spawn3
     - Sprite: {fileID: 21300436, guid: 8cb5a665754e67c40ada08ca5594cf88, type: 3}
       Collision: 0
       PhysicsMaterial: {fileID: 0}
@@ -2608,10 +2608,10 @@ MonoBehaviour:
       OrderInLayer: 0
       Tag: Untagged
     - Sprite: {fileID: 21300576, guid: 8cb5a665754e67c40ada08ca5594cf88, type: 3}
-      Collision: 0
+      Collision: 1
       PhysicsMaterial: {fileID: 0}
       IsTrigger: 0
-      Rotation: 0
+      Rotation: 270
       FlipHorizontally: 0
       FlipVertically: 0
       OrderInLayer: 0
@@ -2629,7 +2629,7 @@ MonoBehaviour:
       Collision: 0
       PhysicsMaterial: {fileID: 0}
       IsTrigger: 0
-      Rotation: 0
+      Rotation: 180
       FlipHorizontally: 0
       FlipVertically: 0
       OrderInLayer: 0
