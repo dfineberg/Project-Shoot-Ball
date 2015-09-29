@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2015
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Project Shoot Ball.CSharp", "Project Shoot Ball.CSharp.csproj", "{3CF10790-0C97-3011-D8BD-6132052A4530}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Project Shoot Ball.CSharp.Editor", "Project Shoot Ball.CSharp.Editor.csproj", "{4195BECD-BF90-37E4-0CD8-1DFDDF69736D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3CF10790-0C97-3011-D8BD-6132052A4530}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3CF10790-0C97-3011-D8BD-6132052A4530}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3CF10790-0C97-3011-D8BD-6132052A4530}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3CF10790-0C97-3011-D8BD-6132052A4530}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4195BECD-BF90-37E4-0CD8-1DFDDF69736D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4195BECD-BF90-37E4-0CD8-1DFDDF69736D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4195BECD-BF90-37E4-0CD8-1DFDDF69736D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4195BECD-BF90-37E4-0CD8-1DFDDF69736D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -102,7 +102,7 @@ namespace TileEditor
 #if UNITY_5_0
                         if (info.Center == collider.offset && info.Size == collider.size)
 #else
-                         if (info.Center == collider.center && info.Size == collider.size)
+                         if (info.Center == collider.offset && info.Size == collider.size)
 #endif
                         {
                             return true;
@@ -123,7 +123,7 @@ namespace TileEditor
 #if UNITY_5_0
                         if (collider.offset == info.Center && collider.radius == info.Radius)
 #else
-                        if (collider.center == info.Center && collider.radius == info.Radius)
+                        if (collider.offset == info.Center && collider.radius == info.Radius)
 
 #endif
                         {
@@ -184,7 +184,7 @@ namespace TileEditor
 #if UNITY_5_0
                             info = new BoxCollider2DInfo(collider.offset, collider.size);
 #else
-                              info = new BoxCollider2DInfo(collider.center, collider.size);
+                              info = new BoxCollider2DInfo(collider.offset, collider.size);
 #endif
 
                         }
@@ -198,7 +198,7 @@ namespace TileEditor
 #if UNITY_5_0
                             info = new CircleCollider2DInfo(collider.offset, collider.radius);
 #else
-                              info = new CircleCollider2DInfo(collider.center, collider.radius);
+                              info = new CircleCollider2DInfo(collider.offset, collider.radius);
 #endif
 
                         }
@@ -242,7 +242,7 @@ namespace TileEditor
 #if UNITY_5_0
                             collider.offset = info.Center;
 #else
-                             collider.center = info.Center;
+                             collider.offset = info.Center;
 #endif
 
                         }
@@ -258,7 +258,7 @@ namespace TileEditor
 #if UNITY_5_0
                             collider.offset = info.Center;
 #else
-                            collider.center = info.Center;
+                            collider.offset = info.Center;
 #endif
 
                             collider.radius = info.Radius;
