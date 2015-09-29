@@ -100,7 +100,7 @@ TrailRenderer:
   - {fileID: 2100000, guid: e11378c492c76d04e8143ff9294309ff, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
-  m_UseLightProbes: 1
+  m_UseLightProbes: 0
   m_ReflectionProbeUsage: 1
   m_ProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
@@ -111,9 +111,9 @@ TrailRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Time: .400000006
+  m_Time: .5
   m_StartWidth: .5
-  m_EndWidth: .400000006
+  m_EndWidth: .300000012
   m_Colors:
     m_Color[0]:
       serializedVersion: 2
@@ -123,14 +123,14 @@ TrailRenderer:
       rgba: 4281414143
     m_Color[2]:
       serializedVersion: 2
-      rgba: 4281414143
+      rgba: 3794874879
     m_Color[3]:
       serializedVersion: 2
-      rgba: 4281414143
+      rgba: 2788241919
     m_Color[4]:
       serializedVersion: 2
-      rgba: 4281414143
-  m_MinVertexDistance: .300000012
+      rgba: 758198783
+  m_MinVertexDistance: .5
   m_Autodestruct: 0
 --- !u!212 &21279486
 SpriteRenderer:
