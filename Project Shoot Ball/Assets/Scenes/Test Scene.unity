@@ -10456,12 +10456,12 @@ MonoBehaviour:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 40
-    m_FontStyle: 0
+    m_FontSize: 100
+    m_FontStyle: 1
     m_BestFit: 0
     m_MinSize: 10
     m_MaxSize: 40
-    m_Alignment: 4
+    m_Alignment: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
@@ -10481,8 +10481,8 @@ RectTransform:
   m_RootOrder: 0
   m_AnchorMin: {x: .5, y: .899999976}
   m_AnchorMax: {x: .5, y: .899999976}
-  m_AnchoredPosition: {x: -557, y: -3.05180001e-05}
-  m_SizeDelta: {x: 286, y: 54}
+  m_AnchoredPosition: {x: -504, y: -59}
+  m_SizeDelta: {x: 286, y: 156}
   m_Pivot: {x: .5, y: .5}
 --- !u!222 &743236061
 CanvasRenderer:
