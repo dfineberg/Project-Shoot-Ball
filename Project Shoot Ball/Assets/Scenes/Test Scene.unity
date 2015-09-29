@@ -24038,7 +24038,7 @@ MonoBehaviour:
     m_LineSpacing: 1
   m_Text: 'Game Over
 
-    press start to retry'
+    Press Start To Retry'
 --- !u!222 &1818947158
 CanvasRenderer:
   m_ObjectHideFlags: 0

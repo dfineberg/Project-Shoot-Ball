@@ -10,7 +10,7 @@ GameObject:
   - 4: {fileID: 450468}
   - 212: {fileID: 21279486}
   m_Layer: 0
-  m_Name: New Sprite
+  m_Name: BallSprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -55,7 +55,7 @@ Transform:
   m_GameObject: {fileID: 125878}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: -0, z: 0}
-  m_LocalScale: {x: .0523150153, y: .0523150153, z: .0523150153}
+  m_LocalScale: {x: 1.05649817, y: 1.05649865, z: 1.05649865}
   m_Children: []
   m_Father: {fileID: 412956}
   m_RootOrder: 0
@@ -111,9 +111,9 @@ TrailRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Time: .699999988
-  m_StartWidth: .699999988
-  m_EndWidth: 0
+  m_Time: .400000006
+  m_StartWidth: .5
+  m_EndWidth: .400000006
   m_Colors:
     m_Color[0]:
       serializedVersion: 2
@@ -123,14 +123,14 @@ TrailRenderer:
       rgba: 4281414143
     m_Color[2]:
       serializedVersion: 2
-      rgba: 2972791295
+      rgba: 4281414143
     m_Color[3]:
       serializedVersion: 2
-      rgba: 1043411455
+      rgba: 4281414143
     m_Color[4]:
       serializedVersion: 2
-      rgba: 3224063
-  m_MinVertexDistance: .400000006
+      rgba: 4281414143
+  m_MinVertexDistance: .300000012
   m_Autodestruct: 0
 --- !u!212 &21279486
 SpriteRenderer:
@@ -156,7 +156,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 10
-  m_Sprite: {fileID: 21300000, guid: baf7aa086f0bde749b7c71daf6d6d5da, type: 3}
+  m_Sprite: {fileID: 21300000, guid: f66e13f274a0a3a48b196b0fc0a3fb9f, type: 3}
   m_Color: {r: 1, g: 0, b: 0, a: 1}
 --- !u!1001 &100100000
 Prefab:
