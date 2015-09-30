@@ -8457,6 +8457,7 @@ GameObject:
   - 114: {fileID: 568481939}
   - 114: {fileID: 568481942}
   - 114: {fileID: 568481941}
+  - 114: {fileID: 568481943}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -8494,7 +8495,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: .192156866, g: .301960796, b: .474509805, a: .0196078438}
+  m_BackGroundColor: {r: 0, g: .751724005, b: 1, a: .0196078438}
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0
@@ -8589,13 +8590,13 @@ MonoBehaviour:
   shader: {fileID: 4800000, guid: 46bd0f7afa367534eb405ad0eae5c9df, type: 3}
   scanlinePattern: {fileID: 2800000, guid: a1dbf24ae6b15204d865e07f735d09aa, type: 3}
   scanlineCountAuto: 0
-  scanlineCount: 948
-  scanlineBrightMin: .75
+  scanlineCount: 4500
+  scanlineBrightMin: .600000024
   scanlineBrightMax: 1
   mask: {fileID: 2800000, guid: 740e2a6166d12b5479fbc50eb9a1fc83, type: 3}
   reflex: {fileID: 2800000, guid: 1fc9ba9fb0c2dbf42b42d010983ac96d, type: 3}
-  reflexMagnetude: .5
-  radialDistortion: .200000003
+  reflexMagnetude: .514999986
+  radialDistortion: .400000006
 --- !u!114 &568481942
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8618,6 +8619,22 @@ MonoBehaviour:
   staticMask: {fileID: 2800000, guid: 43a04c1efe2bb194e936e6b500cc884d, type: 3}
   staticVertical: 0
   staticMagnetude: .0149999997
+--- !u!114 &568481943
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 568481933}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2aa61681626494248bb9ba41ba5881bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  followSpeed: 20
+  zoom: .25
+  zoomSpeed: 2
+  maxZoom: 10
+  minZoom: 8
 --- !u!1 &572209353
 GameObject:
   m_ObjectHideFlags: 0

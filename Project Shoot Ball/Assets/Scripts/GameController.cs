@@ -7,6 +7,7 @@ public class GameController : MonoBehaviour
     public GameObject ballPrefab;
 
     GameplayGUI gameplayGUI;
+    CameraController cameraController;
     float gameTime = 0f;
 
     public enum State { PreGame, Playing, PostGame }
@@ -81,6 +82,15 @@ public class GameController : MonoBehaviour
         {
             Debug.LogError(playerStartTiles.Length + " playerStartPos objects found");
         }
+
+        cameraController = Camera.main.gameObject.GetComponent<CameraController>();
+
+        if(cameraController == null)
+        {
+            cameraController = Camera.main.gameObject.AddComponent<CameraController>();
+        }
+
+        cameraController.Init();
     }
 
     void HandleCatchBall(PlayerController player)
