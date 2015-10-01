@@ -8590,12 +8590,12 @@ MonoBehaviour:
   shader: {fileID: 4800000, guid: 46bd0f7afa367534eb405ad0eae5c9df, type: 3}
   scanlinePattern: {fileID: 2800000, guid: a1dbf24ae6b15204d865e07f735d09aa, type: 3}
   scanlineCountAuto: 0
-  scanlineCount: 4500
+  scanlineCount: 600
   scanlineBrightMin: .600000024
   scanlineBrightMax: 1
   mask: {fileID: 2800000, guid: 740e2a6166d12b5479fbc50eb9a1fc83, type: 3}
   reflex: {fileID: 2800000, guid: 1fc9ba9fb0c2dbf42b42d010983ac96d, type: 3}
-  reflexMagnetude: .514999986
+  reflexMagnetude: .600000024
   radialDistortion: .400000006
 --- !u!114 &568481942
 MonoBehaviour:
@@ -24551,7 +24551,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 40
+    m_FontSize: 80
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 10
@@ -24584,8 +24584,8 @@ RectTransform:
   m_RootOrder: 1
   m_AnchorMin: {x: .5, y: .5}
   m_AnchorMax: {x: .5, y: .5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 314, y: 119}
+  m_AnchoredPosition: {x: -1.279753e-05, y: -2.28881836e-05}
+  m_SizeDelta: {x: 1216, y: 555}
   m_Pivot: {x: .5, y: .5}
 --- !u!1 &1836374724
 GameObject:

@@ -61,6 +61,7 @@ Transform:
   m_RootOrder: 0
 --- !u!50 &5042310
 Rigidbody2D:
+  serializedVersion: 2
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -69,11 +70,11 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: .0500000007
   m_GravityScale: 0
-  m_FixedAngle: 0
   m_IsKinematic: 0
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!58 &5878232
 CircleCollider2D:
   m_ObjectHideFlags: 1
@@ -117,19 +118,19 @@ TrailRenderer:
   m_Colors:
     m_Color[0]:
       serializedVersion: 2
-      rgba: 4281414143
+      rgba: 4294949424
     m_Color[1]:
       serializedVersion: 2
-      rgba: 4281414143
+      rgba: 4294949424
     m_Color[2]:
       serializedVersion: 2
-      rgba: 3794874879
+      rgba: 2617227824
     m_Color[3]:
       serializedVersion: 2
-      rgba: 2788241919
+      rgba: 2231352113
     m_Color[4]:
       serializedVersion: 2
-      rgba: 758198783
+      rgba: 1828698672
   m_MinVertexDistance: .5
   m_Autodestruct: 0
 --- !u!212 &21279486
@@ -164,7 +165,27 @@ Prefab:
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
-    m_Modifications: []
+    m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: m_Colors.m_Color[0].rgba
+      value: 4294949424
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_Colors.m_Color[1].rgba
+      value: 4294949424
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_Colors.m_Color[2].rgba
+      value: 2617227824
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_Colors.m_Color[3].rgba
+      value: 2231352113
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_Colors.m_Color[4].rgba
+      value: 1828698672
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 169834}
