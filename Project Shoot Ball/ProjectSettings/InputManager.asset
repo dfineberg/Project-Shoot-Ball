@@ -1124,7 +1124,7 @@ InputManager:
     invert: 0
     type: 2
     axis: 8
-    joyNum: 4
+    joyNum: 2
   - serializedVersion: 3
     m_Name: TriggersL_3
     descriptiveName: 
@@ -1140,7 +1140,7 @@ InputManager:
     invert: 0
     type: 2
     axis: 8
-    joyNum: 4
+    joyNum: 3
   - serializedVersion: 3
     m_Name: TriggersL_4
     descriptiveName: 
