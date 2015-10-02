@@ -32,7 +32,7 @@ MonoBehaviour:
       FlipHorizontally: 0
       FlipVertically: 0
       OrderInLayer: 0
-      Tag: Untagged
+      Tag: BallStartPos
     - Sprite: {fileID: 21300004, guid: 8cb5a665754e67c40ada08ca5594cf88, type: 3}
       Collision: 0
       PhysicsMaterial: {fileID: 0}
@@ -322,7 +322,7 @@ MonoBehaviour:
       OrderInLayer: 0
       Tag: Untagged
     - Sprite: {fileID: 21300068, guid: 8cb5a665754e67c40ada08ca5594cf88, type: 3}
-      Collision: 0
+      Collision: 1
       PhysicsMaterial: {fileID: 0}
       IsTrigger: 0
       Rotation: 0
@@ -1976,7 +1976,7 @@ MonoBehaviour:
       FlipHorizontally: 0
       FlipVertically: 0
       OrderInLayer: 0
-      Tag: Untagged
+      Tag: Spawn3
     - Sprite: {fileID: 21300436, guid: 8cb5a665754e67c40ada08ca5594cf88, type: 3}
       Collision: 0
       PhysicsMaterial: {fileID: 0}
@@ -2608,10 +2608,10 @@ MonoBehaviour:
       OrderInLayer: 0
       Tag: Untagged
     - Sprite: {fileID: 21300576, guid: 8cb5a665754e67c40ada08ca5594cf88, type: 3}
-      Collision: 0
+      Collision: 1
       PhysicsMaterial: {fileID: 0}
       IsTrigger: 0
-      Rotation: 0
+      Rotation: 270
       FlipHorizontally: 0
       FlipVertically: 0
       OrderInLayer: 0
@@ -2629,7 +2629,7 @@ MonoBehaviour:
       Collision: 0
       PhysicsMaterial: {fileID: 0}
       IsTrigger: 0
-      Rotation: 0
+      Rotation: 180
       FlipHorizontally: 0
       FlipVertically: 0
       OrderInLayer: 0
@@ -4166,3 +4166,113 @@ MonoBehaviour:
       Tag: Untagged
   - Name: Set
     TileList: []
+  - Name: Set
+    TileList:
+    - Sprite: {fileID: 21300000, guid: 47ffe5c77c98641498b2d6ebe64acbdb, type: 3}
+      Collision: 1
+      PhysicsMaterial: {fileID: 0}
+      IsTrigger: 0
+      Rotation: 0
+      FlipHorizontally: 0
+      FlipVertically: 0
+      OrderInLayer: 0
+      Tag: Untagged
+    - Sprite: {fileID: 21300000, guid: 5964bfc18a5f73d4ea8d6ccdd50bbca5, type: 3}
+      Collision: 0
+      PhysicsMaterial: {fileID: 0}
+      IsTrigger: 0
+      Rotation: 0
+      FlipHorizontally: 0
+      FlipVertically: 0
+      OrderInLayer: 0
+      Tag: PlayerStartPos
+    - Sprite: {fileID: 21300000, guid: 5467788a0c411164fa1a1e9f1f8042c5, type: 3}
+      Collision: 0
+      PhysicsMaterial: {fileID: 0}
+      IsTrigger: 0
+      Rotation: 0
+      FlipHorizontally: 0
+      FlipVertically: 0
+      OrderInLayer: 0
+      Tag: BallStartPos
+    - Sprite: {fileID: 21300000, guid: 35cfadf4655771d459b202bf56126f21, type: 3}
+      Collision: 1
+      PhysicsMaterial: {fileID: 0}
+      IsTrigger: 0
+      Rotation: 0
+      FlipHorizontally: 0
+      FlipVertically: 0
+      OrderInLayer: 0
+      Tag: Untagged
+    - Sprite: {fileID: 21300000, guid: 3a8e592744f81294a917b92abbbdbad5, type: 3}
+      Collision: 1
+      PhysicsMaterial: {fileID: 0}
+      IsTrigger: 0
+      Rotation: 0
+      FlipHorizontally: 0
+      FlipVertically: 0
+      OrderInLayer: 0
+      Tag: Untagged
+    - Sprite: {fileID: 21300000, guid: 801fa03cc02db2e4781e571e5d83f600, type: 3}
+      Collision: 1
+      PhysicsMaterial: {fileID: 0}
+      IsTrigger: 0
+      Rotation: 0
+      FlipHorizontally: 0
+      FlipVertically: 0
+      OrderInLayer: 0
+      Tag: Untagged
+    - Sprite: {fileID: 21300000, guid: 69fa86e14e38b314abd68488b9c34a11, type: 3}
+      Collision: 1
+      PhysicsMaterial: {fileID: 0}
+      IsTrigger: 0
+      Rotation: 0
+      FlipHorizontally: 0
+      FlipVertically: 0
+      OrderInLayer: 0
+      Tag: Untagged
+    - Sprite: {fileID: 21300000, guid: 692c5a3ff537a3a4991299c0eb423c97, type: 3}
+      Collision: 1
+      PhysicsMaterial: {fileID: 0}
+      IsTrigger: 0
+      Rotation: 0
+      FlipHorizontally: 0
+      FlipVertically: 0
+      OrderInLayer: 0
+      Tag: Untagged
+    - Sprite: {fileID: 21300000, guid: 15d254ca9ec78494b89c522d0e5917f6, type: 3}
+      Collision: 1
+      PhysicsMaterial: {fileID: 0}
+      IsTrigger: 0
+      Rotation: 0
+      FlipHorizontally: 0
+      FlipVertically: 0
+      OrderInLayer: 0
+      Tag: Untagged
+    - Sprite: {fileID: 21300000, guid: d4cb9edfaffd540468bc2356cf33b738, type: 3}
+      Collision: 1
+      PhysicsMaterial: {fileID: 0}
+      IsTrigger: 0
+      Rotation: 0
+      FlipHorizontally: 0
+      FlipVertically: 0
+      OrderInLayer: 0
+      Tag: Untagged
+    - Sprite: {fileID: 21300000, guid: f09ab853c1b2cad42a22c736de1fe2c1, type: 3}
+      Collision: 1
+      PhysicsMaterial: {fileID: 0}
+      IsTrigger: 0
+      Rotation: 0
+      FlipHorizontally: 0
+      FlipVertically: 0
+      OrderInLayer: 0
+      Tag: Untagged
+    - Sprite: {fileID: 21300000, guid: 4ff0ce70658f5f440b4bac3e4207b4a4, type: 3}
+      Collision: 1
+      PhysicsMaterial: {fileID: 0}
+      IsTrigger: 0
+      Rotation: 0
+      FlipHorizontally: 0
+      FlipVertically: 0
+      OrderInLayer: 0
+      Tag: Untagged

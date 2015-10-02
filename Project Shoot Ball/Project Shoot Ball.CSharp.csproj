@@ -57,12 +57,6 @@
     <Reference Include="UnityEngine.Networking">
       <HintPath>Library\UnityAssemblies\UnityEngine.Networking.dll</HintPath>
     </Reference>
-    <Reference Include="UnityEngine.Networking">
-      <HintPath>Library\UnityAssemblies\UnityEngine.Networking.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.UI">
-      <HintPath>Library\UnityAssemblies\UnityEngine.UI.dll</HintPath>
-    </Reference>
     <Reference Include="UnityEditor">
       <HintPath>Library\UnityAssemblies\UnityEditor.dll</HintPath>
     </Reference>
@@ -81,6 +75,7 @@
     <Compile Include="Assets\PolyNav2D\Scripts\Runtime\PolyNav2D.cs" />
     <Compile Include="Assets\PolyNav2D\Scripts\Runtime\PolyNavAgent.cs" />
     <Compile Include="Assets\PolyNav2D\Scripts\Runtime\PolyNavObstacle.cs" />
+    <Compile Include="Assets\Retro Pixel\Scripts\RetroPixel.cs" />
     <Compile Include="Assets\Scripts\BallFollow.cs" />
     <Compile Include="Assets\Scripts\CameraController.cs" />
     <Compile Include="Assets\Scripts\DebugControls.cs" />
@@ -102,6 +97,22 @@
     <Compile Include="Assets\Tile Editor\Scripts\Class\TileMap.cs" />
     <Compile Include="Assets\Tile Editor\Scripts\Class\TileSet.cs" />
     <Compile Include="Assets\Tile Editor\Scripts\Class\TileSetManager.cs" />
+    <Compile Include="Assets\Vortex Game Studios\FilterBehavior\FilterBehaviour.cs" />
+    <Compile Include="Assets\Vortex Game Studios\OLD TV Filter 2\OLDTVScreen.cs" />
+    <Compile Include="Assets\Vortex Game Studios\OLD TV Filter 2\OLDTVTube.cs" />
+    <Compile Include="Assets\Vortex Game Studios\OLD TV Filter 2\Tutorial\CameraReflex.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Retro Pixel\Readme.txt" />
+    <None Include="Assets\Retro Pixel\Resources\Shaders\RetroPixel2.shader" />
+    <None Include="Assets\Retro Pixel\Resources\Shaders\RetroPixel3.shader" />
+    <None Include="Assets\Retro Pixel\Resources\Shaders\RetroPixel4.shader" />
+    <None Include="Assets\Retro Pixel\Resources\Shaders\RetroPixel5.shader" />
+    <None Include="Assets\Retro Pixel\Resources\Shaders\RetroPixel6.shader" />
+    <None Include="Assets\Retro Pixel\Resources\Shaders\RetroPixel7.shader" />
+    <None Include="Assets\Retro Pixel\Resources\Shaders\RetroPixel8.shader" />
+    <None Include="Assets\Vortex Game Studios\OLD TV Filter 2\Shader\OLDTVFilter_Screen.shader" />
+    <None Include="Assets\Vortex Game Studios\OLD TV Filter 2\Shader\OLDTVFilter_Tube.shader" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\SyntaxTree\UnityVS\2015\UnityVS.CSharp.targets" />
 </Project>

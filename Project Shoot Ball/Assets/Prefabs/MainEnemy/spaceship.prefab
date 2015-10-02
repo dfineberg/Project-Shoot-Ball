@@ -8,12 +8,12 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 469766}
-  - 212: {fileID: 21290554}
   - 114: {fileID: 11429142}
   - 58: {fileID: 5831842}
   - 50: {fileID: 5046132}
   - 114: {fileID: 11453342}
   - 114: {fileID: 11456736}
+  - 212: {fileID: 21281056}
   m_Layer: 0
   m_Name: spaceship
   m_TagString: Untagged
@@ -29,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 196832}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 11.4499998, y: 8.40999985, z: 0}
-  m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -109,7 +109,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnTime: 1
---- !u!212 &21290554
+--- !u!212 &21281056
 SpriteRenderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -133,8 +133,8 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 19bbb0e77d8074a42a9e2c9de8736ec9, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 60a6853ca6db79d4d9106728b4129222, type: 3}
+  m_Color: {r: .625, g: .844827592, b: 1, a: 1}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
