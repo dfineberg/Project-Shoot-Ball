@@ -69,6 +69,7 @@
     <Compile Include="Assets\PolyNav2D\Scripts\Runtime\PolyNav2D.cs" />
     <Compile Include="Assets\PolyNav2D\Scripts\Runtime\PolyNavAgent.cs" />
     <Compile Include="Assets\PolyNav2D\Scripts\Runtime\PolyNavObstacle.cs" />
+    <Compile Include="Assets\Retro Pixel\Scripts\RetroPixel.cs" />
     <Compile Include="Assets\Scripts\BallFollow.cs" />
     <Compile Include="Assets\Scripts\CameraController.cs" />
     <Compile Include="Assets\Scripts\DebugControls.cs" />
@@ -90,6 +91,16 @@
     <Compile Include="Assets\Tile Editor\Scripts\Class\TileMap.cs" />
     <Compile Include="Assets\Tile Editor\Scripts\Class\TileSet.cs" />
     <Compile Include="Assets\Tile Editor\Scripts\Class\TileSetManager.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Retro Pixel\Readme.txt" />
+    <None Include="Assets\Retro Pixel\Resources\Shaders\RetroPixel2.shader" />
+    <None Include="Assets\Retro Pixel\Resources\Shaders\RetroPixel3.shader" />
+    <None Include="Assets\Retro Pixel\Resources\Shaders\RetroPixel4.shader" />
+    <None Include="Assets\Retro Pixel\Resources\Shaders\RetroPixel5.shader" />
+    <None Include="Assets\Retro Pixel\Resources\Shaders\RetroPixel6.shader" />
+    <None Include="Assets\Retro Pixel\Resources\Shaders\RetroPixel7.shader" />
+    <None Include="Assets\Retro Pixel\Resources\Shaders\RetroPixel8.shader" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\SyntaxTree\UnityVS\2015\UnityVS.CSharp.targets" />
 </Project>
