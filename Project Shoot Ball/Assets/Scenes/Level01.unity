@@ -10732,11 +10732,13 @@ GameObject:
   - 92: {fileID: 568481936}
   - 124: {fileID: 568481935}
   - 81: {fileID: 568481934}
+  - 114: {fileID: 568481943}
   - 114: {fileID: 568481940}
   - 114: {fileID: 568481939}
   - 114: {fileID: 568481942}
   - 114: {fileID: 568481941}
-  - 114: {fileID: 568481943}
+  - 95: {fileID: 568481944}
+  - 114: {fileID: 568481945}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -10891,7 +10893,7 @@ MonoBehaviour:
   screenSaturation: 0
   chromaticAberrationPattern: {fileID: 2800000, guid: 739cbb7d52294184593ce6b7676a510b,
     type: 3}
-  chromaticAberrationMagnetude: .0189999994
+  chromaticAberrationMagnetude: 0
   noisePattern: {fileID: 2800000, guid: df0ffcc7ed4d822408d84a34b9d048e0, type: 3}
   noiseMagnetude: .0299999993
   staticPattern: {fileID: 2800000, guid: df0ffcc7ed4d822408d84a34b9d048e0, type: 3}
@@ -10914,6 +10916,40 @@ MonoBehaviour:
   zoomSpeed: 2
   maxZoom: 10
   minZoom: 8
+--- !u!95 &568481944
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 568481933}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 4c3235bc2d2ad8f48be9b3b87d3914f5, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &568481945
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 568481933}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 32f17c1bde38f644a83ed57682180c81, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  explosionEvent:
+    aberration: 0
+    noise: 0
+    staticMagnitude: 0
+    time: 0
+  staticScrollSpeed: 0
 --- !u!1 &576238431
 GameObject:
   m_ObjectHideFlags: 0
