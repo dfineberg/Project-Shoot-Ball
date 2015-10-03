@@ -9,7 +9,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 485126}
   - 212: {fileID: 21246104}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: PlayerSprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25,7 +25,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 414004}
   - 212: {fileID: 21223764}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -47,7 +47,7 @@ GameObject:
   - 50: {fileID: 5019322}
   - 199: {fileID: 19966010}
   - 198: {fileID: 19853160}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -94,6 +94,7 @@ Transform:
   m_RootOrder: 0
 --- !u!50 &5019322
 Rigidbody2D:
+  serializedVersion: 2
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -102,11 +103,11 @@ Rigidbody2D:
   m_LinearDrag: 10
   m_AngularDrag: .0500000007
   m_GravityScale: 0
-  m_FixedAngle: 1
   m_IsKinematic: 0
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
+  m_Constraints: 4
 --- !u!58 &5814704
 CircleCollider2D:
   m_ObjectHideFlags: 1
@@ -159,8 +160,8 @@ MonoBehaviour:
   moveSpeed: 25
   accelleration: 100
   turnSpeed: 1000
-  shotPower: 5
-  throwPower: 7
+  shotPower: 12
+  throwPower: 12
   gravityFieldPower: 2500
   gravityFieldWalkSpeed: .25
   maxShots: 5
@@ -1265,7 +1266,19 @@ Prefab:
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
-    m_Modifications: []
+    m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: shotPower
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: throwPower
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 188920}

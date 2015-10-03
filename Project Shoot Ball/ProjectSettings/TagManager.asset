@@ -21,11 +21,11 @@ TagManager:
   - UI
   - 
   - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - Ball
+  - Player
+  - Ball-Wall-Layer
+  - Enemy
+  - Projectiles
   - 
   - 
   - 
