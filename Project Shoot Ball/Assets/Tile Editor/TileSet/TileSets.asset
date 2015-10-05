@@ -41,7 +41,7 @@ MonoBehaviour:
       FlipHorizontally: 0
       FlipVertically: 0
       OrderInLayer: 0
-      Tag: Spawn1
+      Tag: Untagged
     - Sprite: {fileID: 21300000, guid: 5467788a0c411164fa1a1e9f1f8042c5, type: 3}
       Collision: 0
       PhysicsMaterial: {fileID: 0}
@@ -139,5 +139,14 @@ MonoBehaviour:
       Rotation: 0
       FlipHorizontally: 1
       FlipVertically: 1
+      OrderInLayer: 0
+      Tag: Untagged
+    - Sprite: {fileID: 21300000, guid: 1b61fd0855f997947abbe218df707186, type: 3}
+      Collision: 2
+      PhysicsMaterial: {fileID: 0}
+      IsTrigger: 0
+      Rotation: 0
+      FlipHorizontally: 0
+      FlipVertically: 0
       OrderInLayer: 0
       Tag: Untagged
