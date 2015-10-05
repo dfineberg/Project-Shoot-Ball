@@ -16,6 +16,8 @@ public class PlayerController : MonoBehaviour, IHaveAmmo {
     public float shotRechargeTime;
     public GameObject projectile;
     public Transform projectileShotPos;
+    public LayerMask aimLayerMask;
+    public float maxAimDistance;
     [HideInInspector]
     public bool hasBall = false;
 
@@ -32,6 +34,7 @@ public class PlayerController : MonoBehaviour, IHaveAmmo {
     Collider2D ballCol;
     Rigidbody2D ballRigidbody;
     ParticleSystem gravityParticles;
+    LineRenderer lineRenderer;
 
     public delegate void PlayerEvent(PlayerController player);
     public static event PlayerEvent e_catchBall;
@@ -45,6 +48,7 @@ public class PlayerController : MonoBehaviour, IHaveAmmo {
         ball = GameObject.FindGameObjectWithTag("Ball");
         ballCol = ball.GetComponent<Collider2D>();
         ballRigidbody = ball.GetComponent<Rigidbody2D>();
+        lineRenderer = GetComponent<LineRenderer>();
         gravityParticles = GetComponent<ParticleSystem>();
         gravityParticles.Stop();
         currentShots = maxShots;
@@ -67,6 +71,17 @@ public class PlayerController : MonoBehaviour, IHaveAmmo {
         RotatePlayer();
         ActionCheck();
         GravityFieldCheck();
+        Aim();
+
+        if (myInput.GetAim() != Vector2.zero)
+        {
+            lineRenderer.enabled = true;
+            RotatePlayer();
+        }
+        else
+        {
+            lineRenderer.enabled = false;
+        }
     }
 
     void FixedUpdate()
@@ -97,13 +112,10 @@ public class PlayerController : MonoBehaviour, IHaveAmmo {
     //checks to see if the player is aiming and rotates the character accordingly
     void RotatePlayer()
     {
-        if (myInput.GetAim() != Vector2.zero)
-        {
-            /* the LookRotation method assumes 'forward' means forward in the object's local z-axis
+        /* the LookRotation method assumes 'forward' means forward in the object's local z-axis
             in 2D top-down perspective forward is actually forward in the y-axis, hence the aim vector being used for the second parameter rather than the first */
-            Quaternion targetRotation = Quaternion.LookRotation(Vector3.forward, myInput.GetAim());
-            transform.rotation = Quaternion.RotateTowards(transform.rotation, targetRotation, turnSpeed * Time.deltaTime);
-        }
+        Quaternion targetRotation = Quaternion.LookRotation(Vector3.forward, myInput.GetAim());
+        transform.rotation = Quaternion.RotateTowards(transform.rotation, targetRotation, turnSpeed * Time.deltaTime);
     }
 
     //checks if the player is performing a primary action (shooting/throwing)
@@ -162,6 +174,23 @@ public class PlayerController : MonoBehaviour, IHaveAmmo {
                 Debug.Log("Projectile is null");
             }
         }
+    }
+
+    void Aim()
+    {
+        RaycastHit2D hit = Physics2D.Raycast(transform.position, transform.up, maxAimDistance, aimLayerMask);
+        lineRenderer.SetPosition(0, transform.position);
+
+        if (hit.collider != null)
+        {
+            lineRenderer.SetPosition(1, hit.point);
+        }
+        else
+        {
+            lineRenderer.SetPosition(1, transform.position + (transform.up * maxAimDistance));
+        }
+
+        
     }
 
     void CatchBall()

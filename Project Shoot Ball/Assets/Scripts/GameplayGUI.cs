@@ -27,6 +27,8 @@ public class GameplayGUI : MonoBehaviour {
     public Text scoreText;
     public Text gameOverMessage;
 
+    static float referenceZoom = 7f;
+
     List<AmmoCounter> ammoCounters;
     new RectTransform transform;
 
@@ -47,6 +49,8 @@ public class GameplayGUI : MonoBehaviour {
 
     void Update()
     {
+        float proportion = referenceZoom / Camera.main.orthographicSize;
+
         for(int i = 0; i < ammoCounters.Count; i++)
         {
             Vector2 playerScreenPos = RectTransformUtility.WorldToScreenPoint(Camera.main, ammoCounters[i].playerObject.transform.position);
@@ -55,6 +59,7 @@ public class GameplayGUI : MonoBehaviour {
             ammoCounters[i].counterTransform.anchoredPosition = anchoredPos;
             ammoCounters[i].text.text = ammoCounters[i].player.GetAmmoCount().ToString();
             ammoCounters[i].image.fillAmount = ammoCounters[i].player.GetChargeProportion();
+            ammoCounters[i].counterTransform.localScale = new Vector3(proportion, proportion, proportion);
         }
     }
 
