@@ -39519,7 +39519,6 @@ MonoBehaviour:
   ammoCounterPrefab: {fileID: 102878, guid: 4f9a91907a155fe449c6b2a73779a2ae, type: 2}
   scoreText: {fileID: 743236059}
   gameOverMessage: {fileID: 1818947157}
-  referenceZoom: 7
 --- !u!114 &1860287655
 MonoBehaviour:
   m_ObjectHideFlags: 0
