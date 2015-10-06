@@ -9,7 +9,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 485126}
   - 212: {fileID: 21246104}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: PlayerSprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25,7 +25,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 414004}
   - 212: {fileID: 21223764}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -47,7 +47,8 @@ GameObject:
   - 50: {fileID: 5019322}
   - 199: {fileID: 19966010}
   - 198: {fileID: 19853160}
-  m_Layer: 0
+  - 120: {fileID: 12013118}
+  m_Layer: 9
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -73,7 +74,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 188920}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 10.3943367, y: 6.94026232, z: 0}
+  m_LocalPosition: {x: 8.75027657, y: 5.25322151, z: 9.04693413}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 485126}
@@ -94,6 +95,7 @@ Transform:
   m_RootOrder: 0
 --- !u!50 &5019322
 Rigidbody2D:
+  serializedVersion: 2
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -102,11 +104,11 @@ Rigidbody2D:
   m_LinearDrag: 10
   m_AngularDrag: .0500000007
   m_GravityScale: 0
-  m_FixedAngle: 1
   m_IsKinematic: 0
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
+  m_Constraints: 4
 --- !u!58 &5814704
 CircleCollider2D:
   m_ObjectHideFlags: 1
@@ -159,15 +161,56 @@ MonoBehaviour:
   moveSpeed: 25
   accelleration: 100
   turnSpeed: 1000
-  shotPower: 5
-  throwPower: 7
+  shotPower: 12
+  throwPower: 12
   gravityFieldPower: 2500
   gravityFieldWalkSpeed: .25
   maxShots: 5
   shotRechargeTime: 1
   projectile: {fileID: 109418, guid: 67d04dfc73aee364399617c27e9b9fcc, type: 2}
   projectileShotPos: {fileID: 414004}
+  aimLayerMask:
+    serializedVersion: 2
+    m_Bits: 8192
+  maxAimDistance: 10
   hasBall: 0
+--- !u!120 &12013118
+LineRenderer:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 188920}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000e000000000000000, type: 0}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 1
+  m_ReflectionProbeUsage: 1
+  m_ProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_ImportantGI: 0
+  m_AutoUVMaxDistance: .5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+  m_Positions:
+  - {x: 0, y: 0, z: -1}
+  - {x: 0, y: 10, z: -1}
+  m_Parameters:
+    startWidth: .100000001
+    endWidth: .100000001
+    m_StartColor:
+      serializedVersion: 2
+      rgba: 4294967295
+    m_EndColor:
+      serializedVersion: 2
+      rgba: 4294967295
+  m_UseWorldSpace: 1
 --- !u!198 &19853160
 ParticleSystem:
   m_ObjectHideFlags: 1
@@ -1265,7 +1308,39 @@ Prefab:
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
-    m_Modifications: []
+    m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: shotPower
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: throwPower
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: aimLayerMask.m_Bits
+      value: 8192
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_Parameters.startWidth
+      value: .100000001
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_Parameters.endWidth
+      value: .100000001
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: maxAimDistance
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_UseWorldSpace
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 188920}

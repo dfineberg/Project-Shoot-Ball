@@ -11,7 +11,7 @@ GameObject:
   - 58: {fileID: 5839312}
   - 50: {fileID: 5090606}
   - 114: {fileID: 11432580}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Grenade
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27,7 +27,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 407076}
   - 212: {fileID: 21264900}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: BallSprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -61,6 +61,7 @@ Transform:
   m_RootOrder: 0
 --- !u!50 &5090606
 Rigidbody2D:
+  serializedVersion: 2
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -69,11 +70,11 @@ Rigidbody2D:
   m_LinearDrag: .100000001
   m_AngularDrag: .0500000007
   m_GravityScale: 0
-  m_FixedAngle: 0
   m_IsKinematic: 0
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!58 &5839312
 CircleCollider2D:
   m_ObjectHideFlags: 1
@@ -133,7 +134,11 @@ Prefab:
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
-    m_Modifications: []
+    m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: m_Layer
+      value: 12
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 109418}

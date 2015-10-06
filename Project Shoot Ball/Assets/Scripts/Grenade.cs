@@ -11,6 +11,9 @@ public class Grenade : MonoBehaviour {
     new Collider2D collider;
     new Rigidbody2D rigidbody;
 
+    public delegate void GrenadeEvent();
+    public static event GrenadeEvent e_explode;
+
 
 
     void Start()
@@ -39,6 +42,11 @@ public class Grenade : MonoBehaviour {
         collider.isTrigger = true;
         rigidbody.velocity = Vector2.zero;
         StartCoroutine(ExplodeRoutine());
+
+        if (e_explode != null)
+        {
+            e_explode();
+        }
     }
 
     //coroutine for the explosion animation
