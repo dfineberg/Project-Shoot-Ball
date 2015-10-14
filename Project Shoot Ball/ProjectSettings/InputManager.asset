@@ -595,7 +595,7 @@ InputManager:
     snap: 0
     invert: 0
     type: 0
-    axis: 1
+    axis: 8
     joyNum: 1
   - serializedVersion: 3
     m_Name: Start_2
@@ -611,7 +611,7 @@ InputManager:
     snap: 0
     invert: 0
     type: 0
-    axis: 1
+    axis: 8
     joyNum: 2
   - serializedVersion: 3
     m_Name: Start_3
