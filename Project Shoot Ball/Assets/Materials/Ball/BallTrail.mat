@@ -2,7 +2,7 @@
 %TAG !u! tag:unity3d.com,2011:
 --- !u!21 &2100000
 Material:
-  serializedVersion: 5
+  serializedVersion: 6
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
@@ -10,7 +10,8 @@ Material:
   m_Shader: {fileID: 203, guid: 0000000000000000f000000000000000, type: 0}
   m_ShaderKeywords: 
   m_LightmapFlags: 5
-  m_CustomRenderQueue: -1
+  m_CustomRenderQueue: 3000
+  stringTagMap: {}
   m_SavedProperties:
     serializedVersion: 2
     m_TexEnvs:
@@ -80,16 +81,16 @@ Material:
     m_Floats:
       data:
         first:
-          name: _Cutoff
-        second: .5
-      data:
-        first:
           name: _SrcBlend
         second: 1
       data:
         first:
           name: _DstBlend
         second: 0
+      data:
+        first:
+          name: _Cutoff
+        second: .5
       data:
         first:
           name: _Parallax
@@ -120,10 +121,6 @@ Material:
         second: 0
       data:
         first:
-          name: _EmissionScaleUI
-        second: 0
-      data:
-        first:
           name: _Mode
         second: 0
       data:
@@ -132,8 +129,12 @@ Material:
         second: 0
       data:
         first:
+          name: _EmissionScaleUI
+        second: 0
+      data:
+        first:
           name: _InvFade
-        second: 1
+        second: .00999999978
     m_Colors:
       data:
         first:
@@ -142,12 +143,36 @@ Material:
       data:
         first:
           name: _Color
-        second: {r: 1, g: 1, b: 1, a: 1}
+        second: {r: 1, g: 0, b: 0, a: 1}
       data:
         first:
           name: _EmissionColorUI
         second: {r: 1, g: 1, b: 1, a: 1}
       data:
         first:
+          name: _Color0
+        second: {r: 0, g: 0, b: 0, a: 1}
+      data:
+        first:
+          name: _Color1
+        second: {r: .140000001, g: .140000001, b: .140000001, a: 1}
+      data:
+        first:
+          name: _Color2
+        second: {r: .289999992, g: .289999992, b: .289999992, a: 1}
+      data:
+        first:
+          name: _Color3
+        second: {r: .430000007, g: .430000007, b: .430000007, a: 1}
+      data:
+        first:
+          name: _Color4
+        second: {r: .569999993, g: .569999993, b: .569999993, a: 1}
+      data:
+        first:
           name: _TintColor
-        second: {r: .463235319, g: .463235319, b: .463235319, a: .501960814}
+        second: {r: 1, g: 1, b: 1, a: 1}
+      data:
+        first:
+          name: _EmisColor
+        second: {r: .200000003, g: .200000003, b: .200000003, a: 0}
