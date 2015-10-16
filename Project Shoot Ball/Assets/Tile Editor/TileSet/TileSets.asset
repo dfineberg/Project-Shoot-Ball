@@ -164,7 +164,7 @@ MonoBehaviour:
       PhysicsMaterial: {fileID: 0}
       IsTrigger: 0
       Rotation: 0
-      FlipHorizontally: 1
+      FlipHorizontally: 0
       FlipVertically: 0
       OrderInLayer: 0
       Tag: Untagged
