@@ -147,7 +147,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fuseTime: 1.5
   blastRadius: 15
-  blastTime: .400000006
+  blastTime: .200000003
 --- !u!212 &21264900
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -216,6 +216,10 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: m_Color.b
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: blastTime
+      value: .200000003
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
