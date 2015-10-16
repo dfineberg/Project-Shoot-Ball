@@ -75,7 +75,7 @@ Transform:
   m_GameObject: {fileID: 188920}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 8.75027657, y: 5.25322151, z: 9.04693413}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: .899999976, y: .899999976, z: .899999976}
   m_Children:
   - {fileID: 485126}
   - {fileID: 414004}
@@ -165,8 +165,8 @@ MonoBehaviour:
   throwPower: 12
   gravityFieldPower: 2500
   gravityFieldWalkSpeed: .25
-  maxShots: 5
-  shotRechargeTime: 1
+  maxShots: 1
+  shotRechargeTime: .5
   projectile: {fileID: 109418, guid: 67d04dfc73aee364399617c27e9b9fcc, type: 2}
   projectileShotPos: {fileID: 414004}
   aimLayerMask:
@@ -202,14 +202,14 @@ LineRenderer:
   - {x: 0, y: 0, z: -1}
   - {x: 0, y: 10, z: -1}
   m_Parameters:
-    startWidth: .100000001
-    endWidth: .100000001
+    startWidth: .0500000007
+    endWidth: .0500000007
     m_StartColor:
       serializedVersion: 2
-      rgba: 4294967295
+      rgba: 4294939904
     m_EndColor:
       serializedVersion: 2
-      rgba: 4294967295
+      rgba: 4294950912
   m_UseWorldSpace: 1
 --- !u!198 &19853160
 ParticleSystem:
@@ -437,7 +437,7 @@ ParticleSystem:
           tangentMode: 0
         m_PreInfinity: 2
         m_PostInfinity: 2
-      minMaxState: 3
+      minMaxState: 0
     gravityModifier: 0
     inheritVelocity: 0
     maxNumParticles: 1000
@@ -576,10 +576,10 @@ ParticleSystem:
       maxGradient:
         key0:
           serializedVersion: 2
-          rgba: 5177599
+          rgba: 4278190335
         key1:
           serializedVersion: 2
-          rgba: 4283367679
+          rgba: 4278190335
         key2:
           serializedVersion: 2
           rgba: 4283367679
@@ -1275,7 +1275,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingOrder: 12
   m_Sprite: {fileID: 21300000, guid: 15cb7798ab822984096a251ffeb009ec, type: 3}
-  m_Color: {r: 1, g: .529411793, b: .699797213, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!212 &21246104
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -1300,7 +1300,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 10
-  m_Sprite: {fileID: 21300000, guid: d2a6ed7f84ca07041b9f78b67923cdb6, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 1badfae68d2c840229fc3e098fac0327, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1001 &100100000
 Prefab:
@@ -1327,11 +1327,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: m_Parameters.startWidth
-      value: .100000001
+      value: .0500000007
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: m_Parameters.endWidth
-      value: .100000001
+      value: .0500000007
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: maxAimDistance
@@ -1340,6 +1340,51 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: m_UseWorldSpace
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: maxShots
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: shotRechargeTime
+      value: .5
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 1badfae68d2c840229fc3e098fac0327,
+        type: 3}
+    - target: {fileID: 0}
+      propertyPath: m_Parameters.m_StartColor.rgba
+      value: 4294939904
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_Parameters.m_EndColor.rgba
+      value: 4294950912
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_Positions.Array.data[0].y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_Positions.Array.data[1].y
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: InitialModule.startRotation.minMaxState
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}

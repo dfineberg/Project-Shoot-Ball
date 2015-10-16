@@ -138,7 +138,7 @@ MonoBehaviour:
       IsTrigger: 0
       Rotation: 0
       FlipHorizontally: 1
-      FlipVertically: 1
+      FlipVertically: 0
       OrderInLayer: 0
       Tag: Untagged
     - Sprite: {fileID: 21300000, guid: 1b61fd0855f997947abbe218df707186, type: 3}
@@ -146,6 +146,51 @@ MonoBehaviour:
       PhysicsMaterial: {fileID: 0}
       IsTrigger: 0
       Rotation: 0
+      FlipHorizontally: 0
+      FlipVertically: 0
+      OrderInLayer: 0
+      Tag: Untagged
+    - Sprite: {fileID: 21300000, guid: b3a43383ae97a4a38bff5033c350bf2e, type: 3}
+      Collision: 1
+      PhysicsMaterial: {fileID: 0}
+      IsTrigger: 0
+      Rotation: 0
+      FlipHorizontally: 0
+      FlipVertically: 0
+      OrderInLayer: 0
+      Tag: Untagged
+    - Sprite: {fileID: 21300000, guid: 0f831e586eddc442a8eec3f155afd209, type: 3}
+      Collision: 1
+      PhysicsMaterial: {fileID: 0}
+      IsTrigger: 0
+      Rotation: 0
+      FlipHorizontally: 0
+      FlipVertically: 0
+      OrderInLayer: 0
+      Tag: Untagged
+    - Sprite: {fileID: 21300000, guid: ffa378eea26e14fd2b64a61bf4b4f075, type: 3}
+      Collision: 2
+      PhysicsMaterial: {fileID: 0}
+      IsTrigger: 0
+      Rotation: 0
+      FlipHorizontally: 0
+      FlipVertically: 1
+      OrderInLayer: 0
+      Tag: Untagged
+    - Sprite: {fileID: 21300000, guid: 632ed53dfdf1b4193ae978c82f5f799c, type: 3}
+      Collision: 2
+      PhysicsMaterial: {fileID: 0}
+      IsTrigger: 0
+      Rotation: 90
+      FlipHorizontally: 0
+      FlipVertically: 0
+      OrderInLayer: 0
+      Tag: Untagged
+    - Sprite: {fileID: 21300000, guid: ea219a57932d74b4ea6471a9bd6e4033, type: 3}
+      Collision: 1
+      PhysicsMaterial: {fileID: 0}
+      IsTrigger: 0
+      Rotation: 90
       FlipHorizontally: 0
       FlipVertically: 0
       OrderInLayer: 0
