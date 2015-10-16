@@ -119,7 +119,7 @@ public class PlayerController : MonoBehaviour, IHaveAmmo {
         /* the LookRotation method assumes 'forward' means forward in the object's local z-axis
             in 2D top-down perspective forward is actually forward in the y-axis, hence the aim vector being used for the second parameter rather than the first */
         Quaternion targetRotation = Quaternion.LookRotation(Vector3.forward, rotateDirection);
-        transform.rotation = Quaternion.RotateTowards(transform.rotation, targetRotation, turnSpeed * Time.deltaTime);
+        transform.rotation = Quaternion.Lerp(transform.rotation, targetRotation, turnSpeed * Time.deltaTime);
     }
 
     //checks if the player is performing a primary action (shooting/throwing)
