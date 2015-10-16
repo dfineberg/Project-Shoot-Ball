@@ -380,7 +380,7 @@ ParticleSystem:
         rgba: 4294967295
       maxColor:
         serializedVersion: 2
-        rgba: 4289034752
+        rgba: 4292869888
       minMaxState: 0
     startSize:
       scalar: 1
@@ -1392,7 +1392,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: InitialModule.startColor.maxColor.rgba
-      value: 4289034752
+      value: 4292869888
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
