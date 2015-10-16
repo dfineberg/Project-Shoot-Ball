@@ -68,7 +68,6 @@ public class PlayerController : MonoBehaviour, IHaveAmmo {
         //update the input values stored in myInput
         myInputComponent.GetInput(ref myInput);
 
-        RotatePlayer();
         ActionCheck();
         GravityFieldCheck();
         Aim();
@@ -76,11 +75,16 @@ public class PlayerController : MonoBehaviour, IHaveAmmo {
         if (myInput.GetAim() != Vector2.zero)
         {
             lineRenderer.enabled = true;
-            RotatePlayer();
+            RotatePlayer(myInput.GetAim());
         }
         else
         {
             lineRenderer.enabled = false;
+
+            if(myInput.GetMovement() != Vector2.zero)
+            {
+                RotatePlayer(myInput.GetMovement());
+            }
         }
     }
 
@@ -110,11 +114,11 @@ public class PlayerController : MonoBehaviour, IHaveAmmo {
     }
 
     //checks to see if the player is aiming and rotates the character accordingly
-    void RotatePlayer()
+    void RotatePlayer(Vector2 rotateDirection)
     {
         /* the LookRotation method assumes 'forward' means forward in the object's local z-axis
             in 2D top-down perspective forward is actually forward in the y-axis, hence the aim vector being used for the second parameter rather than the first */
-        Quaternion targetRotation = Quaternion.LookRotation(Vector3.forward, myInput.GetAim());
+        Quaternion targetRotation = Quaternion.LookRotation(Vector3.forward, rotateDirection);
         transform.rotation = Quaternion.RotateTowards(transform.rotation, targetRotation, turnSpeed * Time.deltaTime);
     }
 
