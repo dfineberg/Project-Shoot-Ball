@@ -230,7 +230,6 @@ LineRenderer:
   - {x: 0, y: 0, z: -1}
   - {x: 0, y: 10, z: -1}
   - {x: 0, y: 10, z: -1}
-  - {x: 0, y: 10, z: -1}
   m_Parameters:
     startWidth: .0500000007
     endWidth: .0500000007
@@ -1341,7 +1340,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 0}
       propertyPath: m_Positions.Array.size
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: shotPower
@@ -1414,7 +1413,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: m_Positions.Array.data[1].y
-      value: 20
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: InitialModule.startRotation.minMaxState
@@ -1432,6 +1431,18 @@ Prefab:
       propertyPath: projectileShotPos
       value: 
       objectReference: {fileID: 496578}
+    - target: {fileID: 0}
+      propertyPath: m_Positions.Array.data[3].y
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_Positions.Array.data[3].z
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_Positions.Array.data[2].y
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 188920}

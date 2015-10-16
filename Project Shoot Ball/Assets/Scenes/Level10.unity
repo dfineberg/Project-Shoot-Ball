@@ -3161,6 +3161,7 @@ MonoBehaviour:
   PreviewSize: 90
   SelectedLayerIndex: 1
   ShowEdit: 1
+  ShowLayer: 0
 --- !u!1 &197160228
 GameObject:
   m_ObjectHideFlags: 0

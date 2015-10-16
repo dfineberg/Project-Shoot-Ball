@@ -15,6 +15,8 @@ namespace TileEditor
         public float PreviewSize;
         public int SelectedLayerIndex;
         public bool ShowEdit;
+
+        public bool ShowLayer;
         #endregion
 
         #region Properties
