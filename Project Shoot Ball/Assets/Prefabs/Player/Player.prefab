@@ -32,6 +32,21 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &159726
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 496578}
+  m_Layer: 9
+  m_Name: shotPos
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &188920
 GameObject:
   m_ObjectHideFlags: 0
@@ -62,7 +77,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 134126}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: .0160000008, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 2, y: 2, z: 0}
   m_Children: []
   m_Father: {fileID: 474516}
@@ -79,6 +94,7 @@ Transform:
   m_Children:
   - {fileID: 485126}
   - {fileID: 414004}
+  - {fileID: 496578}
   m_Father: {fileID: 0}
   m_RootOrder: 0
 --- !u!4 &485126
@@ -93,6 +109,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 474516}
   m_RootOrder: 0
+--- !u!4 &496578
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 159726}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: .819999993, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 474516}
+  m_RootOrder: 2
 --- !u!50 &5019322
 Rigidbody2D:
   serializedVersion: 2
@@ -160,7 +188,7 @@ MonoBehaviour:
   playerNo: 1
   moveSpeed: 25
   accelleration: 100
-  turnSpeed: 1000
+  turnSpeed: 20
   shotPower: 12
   throwPower: 12
   gravityFieldPower: 2500
@@ -168,7 +196,7 @@ MonoBehaviour:
   maxShots: 1
   shotRechargeTime: .5
   projectile: {fileID: 109418, guid: 67d04dfc73aee364399617c27e9b9fcc, type: 2}
-  projectileShotPos: {fileID: 414004}
+  projectileShotPos: {fileID: 496578}
   aimLayerMask:
     serializedVersion: 2
     m_Bits: 8192
@@ -200,6 +228,8 @@ LineRenderer:
   m_SortingOrder: 0
   m_Positions:
   - {x: 0, y: 0, z: -1}
+  - {x: 0, y: 10, z: -1}
+  - {x: 0, y: 10, z: -1}
   - {x: 0, y: 10, z: -1}
   m_Parameters:
     startWidth: .0500000007
@@ -1310,6 +1340,10 @@ Prefab:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 0}
+      propertyPath: m_Positions.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
       propertyPath: shotPower
       value: 12
       objectReference: {fileID: 0}
@@ -1386,6 +1420,18 @@ Prefab:
       propertyPath: InitialModule.startRotation.minMaxState
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: turnSpeed
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: projectileShotPos
+      value: 
+      objectReference: {fileID: 496578}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 188920}
