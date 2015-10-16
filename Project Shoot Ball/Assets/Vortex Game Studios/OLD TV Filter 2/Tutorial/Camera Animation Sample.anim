@@ -19,52 +19,42 @@ AnimationClip:
       serializedVersion: 2
       m_Curve:
       - time: 0
-        value: 0
-        inSlope: .121200003
-        outSlope: .121200003
+        value: .5
+        inSlope: -1.40999997
+        outSlope: -1.40999997
         tangentMode: 10
-      - time: 5
-        value: .606000006
-        inSlope: .0436312519
-        outSlope: .0436312519
-        tangentMode: 10
-      - time: 21
-        value: .063000001
-        inSlope: -.0339374989
-        outSlope: -.0339374989
+      - time: .333333343
+        value: .0299999993
+        inSlope: -1.40999997
+        outSlope: -1.40999997
         tangentMode: 10
       m_PreInfinity: 2
       m_PostInfinity: 2
-    attribute: staticVertical
+    attribute: chromaticAberrationMagnetude
     path: 
     classID: 114
     script: {fileID: 11500000, guid: f2d042c89067a46459c6fd5e9e4331cf, type: 3}
   - curve:
       serializedVersion: 2
       m_Curve:
-      - time: 3
-        value: .100000001
-        inSlope: .0843333304
-        outSlope: .0843333304
+      - time: 0
+        value: .5
+        inSlope: -1.40999997
+        outSlope: -1.40999997
         tangentMode: 10
-      - time: 6
-        value: .352999985
-        inSlope: .0210833326
-        outSlope: .0210833326
-        tangentMode: 10
-      - time: 12
-        value: .100000001
-        inSlope: -.0421666652
-        outSlope: -.0421666652
+      - time: .333333343
+        value: .0299999993
+        inSlope: -1.40999997
+        outSlope: -1.40999997
         tangentMode: 10
       m_PreInfinity: 2
       m_PostInfinity: 2
-    attribute: noiseMagnetude
+    attribute: staticMagnetude
     path: 
     classID: 114
     script: {fileID: 11500000, guid: f2d042c89067a46459c6fd5e9e4331cf, type: 3}
   m_PPtrCurves: []
-  m_SampleRate: 1
+  m_SampleRate: 60
   m_WrapMode: 0
   m_Bounds:
     m_Center: {x: 0, y: 0, z: 0}
@@ -72,13 +62,13 @@ AnimationClip:
   m_ClipBindingConstant:
     genericBindings:
     - path: 0
-      attribute: 3167396645
+      attribute: 3354476032
       script: {fileID: 11500000, guid: f2d042c89067a46459c6fd5e9e4331cf, type: 3}
       classID: 114
       customType: 0
       isPPtrCurve: 0
     - path: 0
-      attribute: 3456370519
+      attribute: 1121855487
       script: {fileID: 11500000, guid: f2d042c89067a46459c6fd5e9e4331cf, type: 3}
       classID: 114
       customType: 0
@@ -87,7 +77,7 @@ AnimationClip:
   m_AnimationClipSettings:
     serializedVersion: 2
     m_StartTime: 0
-    m_StopTime: 21
+    m_StopTime: .333333343
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
@@ -106,47 +96,37 @@ AnimationClip:
       serializedVersion: 2
       m_Curve:
       - time: 0
-        value: 0
-        inSlope: .121200003
-        outSlope: .121200003
+        value: .5
+        inSlope: -1.40999997
+        outSlope: -1.40999997
         tangentMode: 10
-      - time: 5
-        value: .606000006
-        inSlope: .0436312519
-        outSlope: .0436312519
-        tangentMode: 10
-      - time: 21
-        value: .063000001
-        inSlope: -.0339374989
-        outSlope: -.0339374989
+      - time: .333333343
+        value: .0299999993
+        inSlope: -1.40999997
+        outSlope: -1.40999997
         tangentMode: 10
       m_PreInfinity: 2
       m_PostInfinity: 2
-    attribute: staticVertical
+    attribute: chromaticAberrationMagnetude
     path: 
     classID: 114
     script: {fileID: 11500000, guid: f2d042c89067a46459c6fd5e9e4331cf, type: 3}
   - curve:
       serializedVersion: 2
       m_Curve:
-      - time: 3
-        value: .100000001
-        inSlope: .0843333304
-        outSlope: .0843333304
+      - time: 0
+        value: .5
+        inSlope: -1.40999997
+        outSlope: -1.40999997
         tangentMode: 10
-      - time: 6
-        value: .352999985
-        inSlope: .0210833326
-        outSlope: .0210833326
-        tangentMode: 10
-      - time: 12
-        value: .100000001
-        inSlope: -.0421666652
-        outSlope: -.0421666652
+      - time: .333333343
+        value: .0299999993
+        inSlope: -1.40999997
+        outSlope: -1.40999997
         tangentMode: 10
       m_PreInfinity: 2
       m_PostInfinity: 2
-    attribute: noiseMagnetude
+    attribute: staticMagnetude
     path: 
     classID: 114
     script: {fileID: 11500000, guid: f2d042c89067a46459c6fd5e9e4331cf, type: 3}

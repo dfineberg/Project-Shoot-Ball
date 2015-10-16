@@ -10,10 +10,15 @@ public class TileMapNavGenerator : MonoBehaviour
         //Turns each tile with a collider attached to it into an obstacle on the nav mesh
         foreach (TileEditor.Tile tile in FindObjectsOfType<TileEditor.Tile>())
         {
-            if (tile.GetComponent<Collider2D>() != null)
+            Collider2D col = tile.GetComponent<Collider2D>();
+
+            if (col != null)
             {
-                PolyNavObstacle ob = tile.gameObject.AddComponent<PolyNavObstacle>();
-                ob.extraOffset = extraOffset;
+                if (col.gameObject.layer != 10)
+                {
+                    PolyNavObstacle ob = tile.gameObject.AddComponent<PolyNavObstacle>();
+                    ob.extraOffset = extraOffset;
+                }
             }
         }
     }
