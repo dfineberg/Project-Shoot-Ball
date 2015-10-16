@@ -70,6 +70,6 @@ public class GameplayGUI : MonoBehaviour {
 
     public void ShowGameOverMessage(bool show)
     {
-        gameOverMessage.enabled = show;
+        gameOverMessage.gameObject.SetActive(show);
     }
 }
