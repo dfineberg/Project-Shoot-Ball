@@ -26,6 +26,7 @@ public class GameplayGUI : MonoBehaviour {
     public GameObject ammoCounterPrefab;
     public Text scoreText;
     public Text gameOverMessage;
+    public GameObject[] gameOverObjects;
 
     static float referenceZoom = 7f;
 
@@ -70,6 +71,9 @@ public class GameplayGUI : MonoBehaviour {
 
     public void ShowGameOverMessage(bool show)
     {
-        gameOverMessage.gameObject.SetActive(show);
+        for(int i = 0; i < gameOverObjects.Length; i++)
+        {
+            gameOverObjects[i].SetActive(show);
+        }
     }
 }

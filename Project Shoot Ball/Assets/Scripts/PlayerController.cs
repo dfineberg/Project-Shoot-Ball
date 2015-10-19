@@ -1,5 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
+using Vectrosity;
 
 public class PlayerController : MonoBehaviour, IHaveAmmo {
 
@@ -18,6 +20,9 @@ public class PlayerController : MonoBehaviour, IHaveAmmo {
     public Transform projectileShotPos;
     public LayerMask aimLayerMask;
     public float maxAimDistance;
+    public Texture aimTexture;
+    public float aimWidth = 50f;
+    public float aimTextureScale = 2f;
     [HideInInspector]
     public bool hasBall = false;
 
@@ -34,7 +39,7 @@ public class PlayerController : MonoBehaviour, IHaveAmmo {
     Collider2D ballCol;
     Rigidbody2D ballRigidbody;
     ParticleSystem gravityParticles;
-    LineRenderer lineRenderer;
+    VectorLine aimLine;
 
     public delegate void PlayerEvent(PlayerController player);
     public static event PlayerEvent e_catchBall;
@@ -48,7 +53,8 @@ public class PlayerController : MonoBehaviour, IHaveAmmo {
         ball = GameObject.FindGameObjectWithTag("Ball");
         ballCol = ball.GetComponent<Collider2D>();
         ballRigidbody = ball.GetComponent<Rigidbody2D>();
-        lineRenderer = GetComponent<LineRenderer>();
+        aimLine = new VectorLine("aimLine", new List<Vector3>(3), aimTexture, aimWidth, LineType.Continuous);
+        aimLine.textureScale = aimTextureScale;
         gravityParticles = GetComponent<ParticleSystem>();
         gravityParticles.Stop();
         currentShots = maxShots;
@@ -74,12 +80,12 @@ public class PlayerController : MonoBehaviour, IHaveAmmo {
 
         if (myInput.GetAim() != Vector2.zero)
         {
-            lineRenderer.enabled = true;
+            aimLine.active = true;
             RotatePlayer(myInput.GetAim());
         }
         else
         {
-            lineRenderer.enabled = false;
+            aimLine.active = false;
 
             if(myInput.GetMovement() != Vector2.zero)
             {
@@ -184,11 +190,11 @@ public class PlayerController : MonoBehaviour, IHaveAmmo {
     void Aim()
     {
         RaycastHit2D hit = Physics2D.CircleCast(transform.position, hasBall ? 0.35f : 0.2f, transform.up, maxAimDistance, aimLayerMask);
-        lineRenderer.SetPosition(0, transform.position);
+        aimLine.points3[0] = transform.position;
 
         if (hit.collider != null)
         {
-            lineRenderer.SetPosition(1, hit.point);
+            aimLine.points3[1] = hit.point;
             float distanceLeft = maxAimDistance - hit.distance;
             Vector2 reflectedRay = Vector2.Reflect(transform.up, hit.normal);
             reflectedRay.Normalize();
@@ -196,20 +202,20 @@ public class PlayerController : MonoBehaviour, IHaveAmmo {
 
             if(secondHit.collider != null)
             {
-                lineRenderer.SetPosition(2, secondHit.point);
+                aimLine.points3[2] = secondHit.point;
             } else
             {
                 reflectedRay *= maxAimDistance - hit.distance;
-                lineRenderer.SetPosition(2, hit.point + reflectedRay);
+                aimLine.points3[2] = hit.point + reflectedRay;
             }
         }
         else
         {
-            lineRenderer.SetPosition(1, transform.position + (transform.up * maxAimDistance));
-            lineRenderer.SetPosition(2, transform.position + (transform.up * maxAimDistance));
+            aimLine.points3[1] = transform.position + (transform.up * maxAimDistance);
+            aimLine.points3[2] = transform.position + (transform.up * maxAimDistance);
         }
 
-        
+        aimLine.Draw3D();
     }
 
     void CatchBall()
