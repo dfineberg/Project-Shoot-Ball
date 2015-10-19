@@ -201,6 +201,7 @@ LineRenderer:
   m_Positions:
   - {x: 0, y: 0, z: -1}
   - {x: 0, y: 10, z: -1}
+  - {x: 0, y: 10, z: -1}
   m_Parameters:
     startWidth: .0500000007
     endWidth: .0500000007
@@ -1309,6 +1310,10 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: m_Positions.Array.size
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: shotPower
       value: 12

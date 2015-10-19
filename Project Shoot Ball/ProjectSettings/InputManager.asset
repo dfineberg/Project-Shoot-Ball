@@ -14,7 +14,7 @@ InputManager:
     altNegativeButton: 
     altPositiveButton: 
     gravity: 0
-    dead: .300000012
+    dead: 0
     sensitivity: 1
     snap: 0
     invert: 0
@@ -30,7 +30,7 @@ InputManager:
     altNegativeButton: 
     altPositiveButton: 
     gravity: 0
-    dead: .300000012
+    dead: 0
     sensitivity: 1
     snap: 0
     invert: 0
@@ -46,7 +46,7 @@ InputManager:
     altNegativeButton: 
     altPositiveButton: 
     gravity: 0
-    dead: .300000012
+    dead: 0
     sensitivity: 1
     snap: 0
     invert: 0
@@ -62,7 +62,7 @@ InputManager:
     altNegativeButton: 
     altPositiveButton: 
     gravity: 0
-    dead: .300000012
+    dead: 0
     sensitivity: 1
     snap: 0
     invert: 0
@@ -78,7 +78,7 @@ InputManager:
     altNegativeButton: 
     altPositiveButton: 
     gravity: 0
-    dead: .300000012
+    dead: 0
     sensitivity: 1
     snap: 0
     invert: 1
@@ -94,7 +94,7 @@ InputManager:
     altNegativeButton: 
     altPositiveButton: 
     gravity: 0
-    dead: .300000012
+    dead: 0
     sensitivity: 1
     snap: 0
     invert: 1
@@ -110,7 +110,7 @@ InputManager:
     altNegativeButton: 
     altPositiveButton: 
     gravity: 0
-    dead: .300000012
+    dead: 0
     sensitivity: 1
     snap: 0
     invert: 1
@@ -126,7 +126,7 @@ InputManager:
     altNegativeButton: 
     altPositiveButton: 
     gravity: 0
-    dead: .300000012
+    dead: 0
     sensitivity: 1
     snap: 0
     invert: 1
@@ -595,7 +595,7 @@ InputManager:
     snap: 0
     invert: 0
     type: 0
-    axis: 8
+    axis: 1
     joyNum: 1
   - serializedVersion: 3
     m_Name: Start_2
@@ -611,7 +611,7 @@ InputManager:
     snap: 0
     invert: 0
     type: 0
-    axis: 8
+    axis: 1
     joyNum: 2
   - serializedVersion: 3
     m_Name: Start_3
@@ -782,12 +782,12 @@ InputManager:
     altNegativeButton: 
     altPositiveButton: 
     gravity: 0
-    dead: .300000012
+    dead: 0
     sensitivity: 1
     snap: 0
     invert: 1
     type: 2
-    axis: 3
+    axis: 4
     joyNum: 1
   - serializedVersion: 3
     m_Name: R_YAxis_2
@@ -798,12 +798,12 @@ InputManager:
     altNegativeButton: 
     altPositiveButton: 
     gravity: 0
-    dead: .300000012
+    dead: 0
     sensitivity: 1
     snap: 0
     invert: 1
     type: 2
-    axis: 3
+    axis: 4
     joyNum: 2
   - serializedVersion: 3
     m_Name: R_YAxis_3
@@ -814,7 +814,7 @@ InputManager:
     altNegativeButton: 
     altPositiveButton: 
     gravity: 0
-    dead: .300000012
+    dead: 0
     sensitivity: 1
     snap: 0
     invert: 1
@@ -830,7 +830,7 @@ InputManager:
     altNegativeButton: 
     altPositiveButton: 
     gravity: 0
-    dead: .300000012
+    dead: 0
     sensitivity: 1
     snap: 0
     invert: 1
@@ -846,12 +846,12 @@ InputManager:
     altNegativeButton: 
     altPositiveButton: 
     gravity: 0
-    dead: .300000012
+    dead: 0
     sensitivity: 1
     snap: 0
     invert: 0
     type: 2
-    axis: 2
+    axis: 3
     joyNum: 1
   - serializedVersion: 3
     m_Name: R_XAxis_2
@@ -862,12 +862,12 @@ InputManager:
     altNegativeButton: 
     altPositiveButton: 
     gravity: 0
-    dead: .300000012
+    dead: 0
     sensitivity: 1
     snap: 0
     invert: 0
     type: 2
-    axis: 2
+    axis: 3
     joyNum: 2
   - serializedVersion: 3
     m_Name: R_XAxis_3
@@ -878,7 +878,7 @@ InputManager:
     altNegativeButton: 
     altPositiveButton: 
     gravity: 0
-    dead: .300000012
+    dead: 0
     sensitivity: 1
     snap: 0
     invert: 0
@@ -894,7 +894,7 @@ InputManager:
     altNegativeButton: 
     altPositiveButton: 
     gravity: 0
-    dead: .300000012
+    dead: 0
     sensitivity: 1
     snap: 0
     invert: 0
@@ -1043,7 +1043,7 @@ InputManager:
     snap: 0
     invert: 0
     type: 2
-    axis: 5
+    axis: 9
     joyNum: 1
   - serializedVersion: 3
     m_Name: TriggersR_2
@@ -1059,7 +1059,7 @@ InputManager:
     snap: 0
     invert: 0
     type: 2
-    axis: 5
+    axis: 9
     joyNum: 2
   - serializedVersion: 3
     m_Name: TriggersR_3
@@ -1107,7 +1107,7 @@ InputManager:
     snap: 0
     invert: 0
     type: 2
-    axis: 4
+    axis: 8
     joyNum: 1
   - serializedVersion: 3
     m_Name: TriggersL_2
@@ -1123,7 +1123,7 @@ InputManager:
     snap: 0
     invert: 0
     type: 2
-    axis: 4
+    axis: 8
     joyNum: 2
   - serializedVersion: 3
     m_Name: TriggersL_3

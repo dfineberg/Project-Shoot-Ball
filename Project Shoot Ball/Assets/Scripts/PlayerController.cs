@@ -119,7 +119,7 @@ public class PlayerController : MonoBehaviour, IHaveAmmo {
         /* the LookRotation method assumes 'forward' means forward in the object's local z-axis
             in 2D top-down perspective forward is actually forward in the y-axis, hence the aim vector being used for the second parameter rather than the first */
         Quaternion targetRotation = Quaternion.LookRotation(Vector3.forward, rotateDirection);
-        transform.rotation = Quaternion.RotateTowards(transform.rotation, targetRotation, turnSpeed * Time.deltaTime);
+        transform.rotation = Quaternion.Lerp(transform.rotation, targetRotation, turnSpeed * Time.deltaTime);
     }
 
     //checks if the player is performing a primary action (shooting/throwing)
@@ -166,7 +166,8 @@ public class PlayerController : MonoBehaviour, IHaveAmmo {
                 if (projectileShotPos != null)
                 {
                     GameObject newProj = (GameObject)Instantiate(projectile, projectileShotPos.TransformPoint(Vector3.zero), Quaternion.identity);
-                    newProj.GetComponent<Rigidbody2D>().AddForce(transform.TransformDirection(Vector3.up) * shotPower, ForceMode2D.Impulse);
+                    newProj.GetComponent<Rigidbody2D>().velocity = transform.TransformDirection(Vector3.up) * shotPower;
+                    //newProj.GetComponent<Rigidbody2D>().AddForce(transform.TransformDirection(Vector3.up) * shotPower, ForceMode2D.Impulse);
                 }
                 else
                 {
@@ -182,16 +183,30 @@ public class PlayerController : MonoBehaviour, IHaveAmmo {
 
     void Aim()
     {
-        RaycastHit2D hit = Physics2D.Raycast(transform.position, transform.up, maxAimDistance, aimLayerMask);
+        RaycastHit2D hit = Physics2D.CircleCast(transform.position, hasBall ? 0.35f : 0.2f, transform.up, maxAimDistance, aimLayerMask);
         lineRenderer.SetPosition(0, transform.position);
 
         if (hit.collider != null)
         {
             lineRenderer.SetPosition(1, hit.point);
+            float distanceLeft = maxAimDistance - hit.distance;
+            Vector2 reflectedRay = Vector2.Reflect(transform.up, hit.normal);
+            reflectedRay.Normalize();
+            RaycastHit2D secondHit = Physics2D.Raycast(hit.point + (reflectedRay * 0.1f), reflectedRay, distanceLeft, aimLayerMask);
+
+            if(secondHit.collider != null)
+            {
+                lineRenderer.SetPosition(2, secondHit.point);
+            } else
+            {
+                reflectedRay *= maxAimDistance - hit.distance;
+                lineRenderer.SetPosition(2, hit.point + reflectedRay);
+            }
         }
         else
         {
             lineRenderer.SetPosition(1, transform.position + (transform.up * maxAimDistance));
+            lineRenderer.SetPosition(2, transform.position + (transform.up * maxAimDistance));
         }
 
         
@@ -203,7 +218,7 @@ public class PlayerController : MonoBehaviour, IHaveAmmo {
         ballRigidbody.velocity = Vector2.zero;
         ballRigidbody.isKinematic = true;
         ball.transform.SetParent(transform);
-        ball.transform.localPosition = projectileShotPos.localPosition;
+        ball.transform.localPosition = Vector2.zero;
         hasBall = true;
 
         if(currentShots < maxShots)
@@ -251,6 +266,7 @@ public class PlayerController : MonoBehaviour, IHaveAmmo {
 
     void ThrowBall()
     {
+        gameObject.layer = 14;
         ballCol.isTrigger = false;
         ball.transform.SetParent(null);
         ballRigidbody.isKinematic = false;
@@ -262,6 +278,7 @@ public class PlayerController : MonoBehaviour, IHaveAmmo {
     {
         yield return new WaitForSeconds(0.1f);
         hasBall = false;
+        gameObject.layer = 9;
     }
 
     public int GetAmmoCount()
