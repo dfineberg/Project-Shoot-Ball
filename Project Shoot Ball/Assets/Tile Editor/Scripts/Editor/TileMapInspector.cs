@@ -197,7 +197,7 @@ namespace TileEditor
                 list.index = index;
                 SerializedProperty item = list.serializedProperty.GetArrayElementAtIndex(index);
                 TileLayer newLayer = TileEditorUtility.CreateLayer(tileMap);
-                newLayer.gameObject.hideFlags = tileMap.ShowLayer ? HideFlags.None : HideFlags.HideInHierarchy;
+                newLayer.gameObject.hideFlags = HideFlags.HideInHierarchy;
                 Undo.RegisterCreatedObjectUndo(newLayer.gameObject, null);
                 item.objectReferenceValue = newLayer;
             };
@@ -362,35 +362,8 @@ namespace TileEditor
 
         private void OnTileLayerGUI()
         {
-
-
             tileLayerList.DoLayoutList();
-
-            bool savedFlag = tileMap.ShowLayer;
-            tileMap.ShowLayer = EditorGUILayout.Toggle("Show Layer", tileMap.ShowLayer);
-
-            if (savedFlag != tileMap.ShowLayer)
-            {
-                ChangeLayerVisiblity();
-            }
-
-            if (tileMap.ShowLayer)
-            {
-                EditorGUILayout.HelpBox("Do not delete or move any tile directly in Hierarchy.", MessageType.Info);
-            }
-
             EditorGUILayout.Space();
-        }
-
-        void ChangeLayerVisiblity()
-        {
-
-            HideFlags flags = tileMap.ShowLayer ? HideFlags.None : HideFlags.HideInHierarchy;
-
-            foreach (TileLayer tileLayer in tileMap.TileLayers)
-            {
-                tileLayer.gameObject.hideFlags = flags;
-            }
         }
 
         #endregion
@@ -722,9 +695,9 @@ namespace TileEditor
                 GUILayout.BeginHorizontal();
                 int lastEditMode = currentEditMode;
                 currentEditMode = GUILayout.Toolbar(currentEditMode, new GUIContent[] {
-              new GUIContent(EditMode.Paint.ToString()+"(B)"),
+              new GUIContent(EditMode.Paint.ToString()+"(B)"), 
                  new GUIContent(EditMode.Move.ToString()+"(M)"),
-               new GUIContent(EditMode.Select.ToString()+"(S)"),
+               new GUIContent(EditMode.Select.ToString()+"(S)"), 
                 new GUIContent(EditMode.Erase.ToString()+"(E)"),
             });
 
@@ -1255,7 +1228,7 @@ namespace TileEditor
                     selectedTile.transform.position = new Vector3(pos.x, pos.y, 0);
                 }
             }
-            if ((e.type == EventType.MouseUp || e.rawType == EventType.MouseUp) && e.button == 0)
+            if ((e.type == EventType.MouseUp || e.rawType == EventType.MouseUp)&& e.button == 0)
             {
                 if (lastKey != -1 && selectedTile != null)
                 {
