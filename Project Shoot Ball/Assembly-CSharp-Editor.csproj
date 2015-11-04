@@ -76,6 +76,7 @@
      <None Include="Assets\Vortex Game Studios\OLD TV Filter 2\Shader\OLDTVFilter_Screen.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\ShowAlphaChannel.shader" />
      <None Include="Assets\Retro Pixel\Resources\Shaders\RetroPixel8.shader" />
+     <None Include="Assets\What to import!.txt" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\SunShaftsComposite.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\ColorCorrectionCurves.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\ScreenSpaceAmbientObscurance.shader" />
@@ -96,9 +97,11 @@
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\ContrastComposite.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_Antialiasing\FXAAPreset3.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\FisheyeShader.shader" />
+     <None Include="Assets\Vectrosity 5\Vectrosity 5 Documentation\Vectrosity changelog.txt" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\Contrast Stretch\Apply.shader" />
      <None Include="Assets\Retro Pixel\Resources\Shaders\RetroPixel3.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\frag_ao.cginc" />
+     <None Include="Assets\Vectrosity 5\Vectrosity 5 Documentation\Vectrosity 5 Upgrade Guide.txt" />
      <None Include="Assets\Standard Assets\Effects\ToonShading\Shaders\ToonBasicOutline.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_DepthOfField\DepthOfField34.shader" />
      <None Include="Assets\Standard Assets\Effects\ImageEffects\Shaders\_BloomAndFlares\MobileBlur.shader" />
@@ -173,6 +176,12 @@
  </Reference>
  <Reference Include="UnityEngine.Analytics">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/UnityAnalytics/UnityEngine.Analytics.dll</HintPath>
+ </Reference>
+ <Reference Include="Vectrosity">
+ <HintPath>/Users/Greg/Documents/Unity/Project-Shoot-Ball/Project Shoot Ball/Assets/Plugins/Vectrosity.dll</HintPath>
+ </Reference>
+ <Reference Include="VectrosityEditor">
+ <HintPath>/Users/Greg/Documents/Unity/Project-Shoot-Ball/Project Shoot Ball/Assets/Vectrosity/Editor/VectrosityEditor.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.Graphs">
  <HintPath>/Applications/Unity/Unity.app/Contents/Frameworks/Managed/UnityEditor.Graphs.dll</HintPath>

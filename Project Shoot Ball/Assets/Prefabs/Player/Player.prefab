@@ -47,7 +47,6 @@ GameObject:
   - 50: {fileID: 5019322}
   - 199: {fileID: 19966010}
   - 198: {fileID: 19853160}
-  - 120: {fileID: 12013118}
   m_Layer: 9
   m_Name: Player
   m_TagString: Player
@@ -160,9 +159,9 @@ MonoBehaviour:
   playerNo: 1
   moveSpeed: 25
   accelleration: 100
-  turnSpeed: 1000
-  shotPower: 12
-  throwPower: 12
+  turnSpeed: 750
+  shotPower: 20
+  throwPower: 15
   gravityFieldPower: 2500
   gravityFieldWalkSpeed: .25
   maxShots: 1
@@ -172,46 +171,11 @@ MonoBehaviour:
   aimLayerMask:
     serializedVersion: 2
     m_Bits: 8192
-  maxAimDistance: 10
+  maxAimDistance: 20
+  aimTexture: {fileID: 2800000, guid: 7a02385d704227a4dbd84018b48be99d, type: 3}
+  aimWidth: 25
+  aimTextureScale: 4
   hasBall: 0
---- !u!120 &12013118
-LineRenderer:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 188920}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_Materials:
-  - {fileID: 10754, guid: 0000000000000000e000000000000000, type: 0}
-  m_SubsetIndices: 
-  m_StaticBatchRoot: {fileID: 0}
-  m_UseLightProbes: 1
-  m_ReflectionProbeUsage: 1
-  m_ProbeAnchor: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_PreserveUVs: 0
-  m_ImportantGI: 0
-  m_AutoUVMaxDistance: .5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingOrder: 0
-  m_Positions:
-  - {x: 0, y: 0, z: -1}
-  - {x: 0, y: 10, z: -1}
-  - {x: 0, y: 10, z: -1}
-  m_Parameters:
-    startWidth: .0500000007
-    endWidth: .0500000007
-    m_StartColor:
-      serializedVersion: 2
-      rgba: 4289034752
-    m_EndColor:
-      serializedVersion: 2
-      rgba: 4289034752
-  m_UseWorldSpace: 1
 --- !u!198 &19853160
 ParticleSystem:
   m_ObjectHideFlags: 1
@@ -381,7 +345,7 @@ ParticleSystem:
         rgba: 4294967295
       maxColor:
         serializedVersion: 2
-        rgba: 4292869888
+        rgba: 4290620672
       minMaxState: 0
     startSize:
       scalar: 1
@@ -1316,11 +1280,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: shotPower
-      value: 12
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: throwPower
-      value: 12
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: m_Layer
@@ -1340,7 +1304,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: maxAimDistance
-      value: 10
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: m_UseWorldSpace
@@ -1397,7 +1361,23 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: InitialModule.startColor.maxColor.rgba
-      value: 4292869888
+      value: 4290620672
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: aimTexture
+      value: 
+      objectReference: {fileID: 2800000, guid: 7a02385d704227a4dbd84018b48be99d, type: 3}
+    - target: {fileID: 0}
+      propertyPath: aimWidth
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: aimTextureScale
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: turnSpeed
+      value: 750
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
